@@ -14,11 +14,6 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 export GOPATH=$HOME
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin
 
-# Pure Prompt (https://github.com/sindresorhus/pure)
-fpath=( "$HOME/.zfunctions" $fpath )
-autoload -U promptinit; promptinit
-prompt pure
-
 # Custom Functions
 fpath=($HOME/.zsh/functions $fpath)
 autoload -U $HOME/.zsh/functions/*(:t)
@@ -58,6 +53,10 @@ source ~/.zsh/plugins/k/k.sh
 source ~/.zsh/plugins/z/z.sh
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+source <(antibody init)
+antibody bundle mafredri/zsh-async
+antibody bundle sindresorhus/pure
 
 # Greeting Message
 $GOPATH/bin/dailyverse -pad
