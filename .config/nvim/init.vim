@@ -13,6 +13,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 syntax off
@@ -23,6 +24,7 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 color molotov
+let g:airline_theme="zenburn"
 
 set backupdir=~/.config/nvim/backups
 set directory=~/.config/nvim/swaps
