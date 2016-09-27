@@ -4,7 +4,6 @@
 set __fish_git_prompt_char_dirtystate '!'
 set __fish_git_prompt_char_untrackedfiles '☡'
 set __fish_git_prompt_char_stashstate '↩'
-set __fish_git_prompt_char_cleanstate '✓'
 
 # Display the state of the branch when inside of a git repo
 function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the branch"
@@ -14,10 +13,6 @@ function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the
   if git_is_touched
     set_color yellow
     echo -n "$__fish_git_prompt_char_dirtystate"
-    set_color normal
-  else
-    set_color green
-    echo -n "$__fish_git_prompt_char_cleanstate"
     set_color normal
   end
 
@@ -45,7 +40,7 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
   set -l is_dot_git (string match '*/.git' $std_prompt)
 
   if git_is_repo; and test -z $is_dot_git
-    set_color 444444
+    set_color 555555
 
     set -l git_branch (command git symbolic-ref --quiet --short HEAD 2> /dev/null; or git rev-parse --short HEAD 2> /dev/null; or echo -n '(unknown)')
 
@@ -56,27 +51,6 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
 
     set_color normal
   end
-end
-
-# Print current user
-function __simple_ass_prompt_get_user -d "Print the user"
-  if test $USER = 'root'
-    set_color red
-  else
-    set_color d75f00
-  end
-  printf '%s' (whoami)
-end
-
-# Get Machines Hostname
-function __simple_ass_prompt_get_host -d "Get Hostname"
-  if test $SSH_TTY
-    tput bold
-    set_color red
-  else
-    set_color af8700
-  end
-  printf '%s' (hostname|cut -d . -f 1)
 end
 
 # Get Project Working Directory
