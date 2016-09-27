@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
@@ -27,11 +28,9 @@ set backupdir=~/.config/nvim/backups
 set directory=~/.config/nvim/swaps
 set undodir=~/.config/nvim/undo
 
-set autoindent " Copy indent from last line when starting new line
 set clipboard+=unnamedplus " Use system clipboards when available
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
-set encoding=utf-8 nobomb " BOM often causes trouble
 set esckeys " Allow cursor keys in insert mode
 set expandtab " Expand tabs to spaces
 set tabstop=4 " Render tabs 4 spaces wide
@@ -52,11 +51,7 @@ set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 set gdefault " By default add g flag to search/replace. Add g to toggle
 set hidden " When a buffer is brought to foreground, remember undo history and marks
-set history=1000 " Increase history from 20 default to 1000
-set hlsearch " Highlight searches
 set ignorecase " Ignore case of searches
-set incsearch " Highlight dynamically as pattern is typed
-set laststatus=2 " Always show status line
 set lazyredraw " Don't redraw when we don't have to
 set magic " Enable extended regexes
 set noerrorbells " Disable error bells
@@ -74,7 +69,6 @@ set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=0 " Never show the tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
-set smarttab " At start of line, <Tab> inserts shiftwidth spaces, <Bs> deletes shiftwidth spaces
 set softtabstop=2 " Tab key results in 2 spaces
 set splitbelow " New window goes below
 set splitright " New windows goes right
