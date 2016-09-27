@@ -3,9 +3,6 @@ set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 set -x GOPATH $HOME
 
-function fish_greeting
-end
-
 # Paths
 test -d /usr/local/sbin          ; and set PATH /usr/local/sbin $PATH
 test -d /usr/local/bin           ; and set PATH /usr/local/bin $PATH
