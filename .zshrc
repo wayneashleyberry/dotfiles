@@ -57,5 +57,7 @@ alias vim='nvim'
 source ~/.zsh/plugins/k/k.sh
 source ~/.zsh/plugins/z/z.sh
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
 # Greeting Message
 $GOPATH/bin/dailyverse -pad
