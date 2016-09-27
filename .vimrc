@@ -32,7 +32,7 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
-set cursorline " Highlight current line
+" set cursorline " Highlight current line
 set autoindent " Copy indent from last line when starting new line
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set diffopt=filler " Add vertical spaces to keep right and left aligned

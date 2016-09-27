@@ -49,12 +49,11 @@ alias gca='git commit -am'
 alias gh='git open' # https://github.com/paulirish/git-open
 
 # Vim
-alias vi='nvim'
-alias vim='nvim'
+alias vi='vim'
 
 # Plugins
 source ~/.zsh/plugins/k/k.sh
 source ~/.zsh/plugins/z/z.sh
 
 # Greeting Message
-$GOPATH/bin/dailyverse
+$GOPATH/bin/dailyverse -pad
