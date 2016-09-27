@@ -12,6 +12,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/fish.vim',   { 'for': 'fish' }
 call plug#end()
 
 let mapleader = '\'
@@ -124,6 +125,11 @@ augroup END
 augroup vim_move
   autocmd!
   let g:move_key_modifier = 'C'
+augroup END
+
+augroup filetype_fish
+  autocmd!
+  au BufRead,BufNewFile *.fish set ft=fish
 augroup END
 
 " Search
