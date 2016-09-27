@@ -2139,7 +2139,7 @@
 			<key>Guid</key>
 			<string>087C4C51-53D8-41F8-8612-426E255EB1E4</string>
 			<key>Horizontal Spacing</key>
-			<real>1.01</real>
+			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
