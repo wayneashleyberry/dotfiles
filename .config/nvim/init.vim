@@ -8,6 +8,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
 Plug 'morhetz/gruvbox'
+Plug 'pangloss/vim-javascript', { 'branch': 'develop' }
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -20,11 +21,10 @@ let g:syntax_on = "off"
 let mapleader = '\'
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-set background=dark
-let g:gruvbox_invert_selection=0
-let g:gruvbox_bold=0
-let g:airline_theme='gruvbox'
-color gruvbox
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+let g:molotov = 1
+color molotov
 
 set backupdir=~/.config/nvim/backups
 set directory=~/.config/nvim/swaps
@@ -119,3 +119,6 @@ map <leader>w :vsp<cr> " Open splits quickly
 command! Config :e $MYVIMRC
 
 map <C-p> :Files<CR>
+
+au FocusLost * :silent! wa! " Save files when focus is lost
+au BufLeave * :silent! wa! " Save files when buffers are left
