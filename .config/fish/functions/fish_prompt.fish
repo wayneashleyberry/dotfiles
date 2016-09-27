@@ -12,9 +12,13 @@ function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the
 
   # Check for changes to be commited
   if git_is_touched
+    set_color yellow
     echo -n "$__fish_git_prompt_char_dirtystate"
+    set_color normal
   else
+    set_color green
     echo -n "$__fish_git_prompt_char_cleanstate"
+    set_color normal
   end
 
   # Check for untracked files
@@ -25,7 +29,9 @@ function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the
 
   # Check for stashed files
   if git_is_stashed
+    set_color yellow
     echo -n "$__fish_git_prompt_char_stashstate"
+    set_color normal
   end
 
   # Check if branch is ahead, behind or diverged of remote
@@ -39,16 +45,14 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
   set -l is_dot_git (string match '*/.git' $std_prompt)
 
   if git_is_repo; and test -z $is_dot_git
-    printf 'on '
-    set_color purple
+    set_color 444444
 
     set -l git_branch (command git symbolic-ref --quiet --short HEAD 2> /dev/null; or git rev-parse --short HEAD 2> /dev/null; or echo -n '(unknown)')
 
     printf '%s ' $git_branch
 
     set state (__simple_ass_prompt_parse_git_branch_state)
-    set_color 0087ff
-    printf '[%s]' $state
+    printf '%s' $state
 
     set_color normal
   end
@@ -77,7 +81,7 @@ end
 
 # Get Project Working Directory
 function __simple_ass_prompt_pwd -d "Get PWD"
-  set_color $fish_color_cwd
+  set_color blue
   printf '%s ' (prompt_pwd)
 end
 
@@ -87,14 +91,14 @@ function fish_prompt
   echo ''
 
   # Logged in user
-  __simple_ass_prompt_get_user
-  set_color normal
-  printf ' at '
+  # __simple_ass_prompt_get_user
+  # set_color normal
+  # printf ' at '
 
   # Machine logged in to
-  __simple_ass_prompt_get_host
-  set_color normal
-  printf ' in '
+  # __simple_ass_prompt_get_host
+  # set_color normal
+  # printf ' in '
 
   # Path
   __simple_ass_prompt_pwd
@@ -111,6 +115,8 @@ function fish_prompt
 
   if test $code -eq 127
     set_color red
+  else
+    set_color fd6dc0
   end
 
   printf '❯ '

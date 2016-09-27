@@ -26,7 +26,7 @@ abbr -a gca "git commit -am"
 # Prompt
 function prompt_pwd --description 'Print the current working directory, NOT shortened to fit the prompt'
     if test "$PWD" != "$HOME"
-        printf "%s" (echo $PWD|sed -e 's|/private||' -e "s|^$HOME/src/github.com/|~/s/g/|" -e "s|^$HOME|~|")
+        printf "%s" (echo $PWD|sed -e 's|/private||' -e "s|^$HOME|~|")
     else
         echo '~'
     end
