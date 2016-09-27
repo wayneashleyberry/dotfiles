@@ -111,13 +111,13 @@ augroup vim_move
   let g:move_key_modifier = 'C'
 augroup END
 
-nnoremap <leader><space> :noh<cr> " Clear search highlighting with <leader>space
-map <Tab> % " Use <Tab> for faster bracket matching
+nnoremap <leader><space> :noh<cr>
+map <Tab> %
 map <leader>w :vsp<cr> " Open splits quickly
+map <C-p> :Files<CR>
 
 command! Config :e $MYVIMRC
 
-map <C-p> :Files<CR>
-
-au FocusLost * :silent! wa! " Save files when focus is lost
-au BufLeave * :silent! wa! " Save files when buffers are left
+" Autosave
+au FocusLost * :silent! wa!
+au BufLeave * :silent! wa!
