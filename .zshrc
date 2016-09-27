@@ -53,8 +53,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
-antibody bundle supercrabtree/k
-antibody bundle rupa/z
+" antibody bundle supercrabtree/k
+" antibody bundle rupa/z
 
 # Greeting Message
 $GOPATH/bin/dailyverse -pad
