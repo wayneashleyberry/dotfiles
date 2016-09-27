@@ -95,3 +95,6 @@ alias gh='git open' # https://github.com/paulirish/git-open
 # Vim
 alias vi='nvim'
 alias vim='nvim'
+
+# Plugins
+source ~/.zsh/plugins/k/k.sh
