@@ -12,7 +12,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/fish.vim',   { 'for': 'fish' }
 call plug#end()
 
 let mapleader = '\'
@@ -98,11 +97,6 @@ set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,
 set wildignore+=.DS_Store
 set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
-
-augroup filetype_fish
-  autocmd!
-  au BufRead,BufNewFile *.fish set ft=fish
-augroup END
 
 augroup ctrlp_config
   autocmd!
