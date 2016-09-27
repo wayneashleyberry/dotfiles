@@ -23,7 +23,6 @@ let mapleader = '\'
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-let g:molotov = 1
 color molotov
 
 set backupdir=~/.config/nvim/backups
