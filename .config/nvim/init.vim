@@ -1,9 +1,8 @@
 let mapleader = '\'
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-set t_Co=256
-set background=dark
-syntax on
+" set t_Co=256
+" set background=dark
 colorscheme molotov
 
 set backupdir=~/.config/nvim/backups
@@ -12,7 +11,7 @@ set undodir=~/.config/nvim/undo
 
 set autoindent " Copy indent from last line when starting new line
 " set clipboard+=unnamedplus " Use system clipboards when available
-set cursorline " Highlight current line
+" set cursorline " Highlight current line
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set encoding=utf-8 nobomb " BOM often causes trouble
