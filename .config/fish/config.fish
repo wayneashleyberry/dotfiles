@@ -21,6 +21,7 @@ abbr -a vi "nvim"
 abbr -a vim "nvim"
 abbr -a gg "cd (git rev-parse --show-toplevel)"
 abbr -a gs "git status -sb"
+abbr -a gca "git commit -am"
 
 # Prompt
 function prompt_pwd --description 'Print the current working directory, NOT shortened to fit the prompt'
