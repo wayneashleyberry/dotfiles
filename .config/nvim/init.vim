@@ -7,9 +7,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
-Plug 'morhetz/gruvbox'
-Plug 'pangloss/vim-javascript', { 'branch': 'develop' }
 Plug 'roman/golden-ratio'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
