@@ -1,12 +1,12 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'morhetz/gruvbox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'joshdick/onedark.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
+Plug 'justinmk/vim-sneak'
+Plug 'morhetz/gruvbox'
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -30,8 +30,7 @@ set directory=~/.config/nvim/swaps
 set undodir=~/.config/nvim/undo
 
 set autoindent " Copy indent from last line when starting new line
-" set clipboard+=unnamedplus " Use system clipboards when available
-" set cursorline " Highlight current line
+set clipboard+=unnamedplus " Use system clipboards when available
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set encoding=utf-8 nobomb " BOM often causes trouble
@@ -62,7 +61,6 @@ set incsearch " Highlight dynamically as pattern is typed
 set laststatus=2 " Always show status line
 set lazyredraw " Don't redraw when we don't have to
 set magic " Enable extended regexes
-set mouse=a " Enable mouse in all in all modes
 set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
@@ -75,7 +73,7 @@ set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shiftwidth=2 " The # of spaces for indenting
 set shortmess=atI " Don't show the intro message when starting vim
-set showtabline=0 " Always show tab bar
+set showtabline=0 " Never show the tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
 set smarttab " At start of line, <Tab> inserts shiftwidth spaces, <Bs> deletes shiftwidth spaces
@@ -89,7 +87,6 @@ set termguicolors " Enable true color support
 set undofile " Persistent Undo
 set viminfo=%,'9999,s512 " Restore buffer list, marks are remembered for 9999 files, registers up to 512Kb are remembered
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
-set wildchar=<TAB> " Character for CLI expansion (TAB-completion)
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
@@ -126,21 +123,6 @@ augroup vim_move
   let g:move_key_modifier = 'C'
 augroup END
 
-" Search
-nnoremap <leader><space> :noh<cr>
-
-" Use <Tab> for bracket matching
-map <Tab> %
-
-map <leader>w :vsp<cr>
-
-" " Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
-
-" " Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
+nnoremap <leader><space> :noh<cr> " Clear search highlighting with <leader>space
+map <Tab> % " Use <Tab> for faster bracket matching
+map <leader>w :vsp<cr> " Open splits quickly
