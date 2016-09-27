@@ -40,6 +40,7 @@ alias ...='cd ...'
 alias ....='cd ....'
 
 # Git
+alias g='git'
 alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
