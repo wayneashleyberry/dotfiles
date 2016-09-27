@@ -17,8 +17,10 @@ call plug#end()
 
 let mapleader = '\'
 
-set guifont=Meslo\ LG\ L\ DZ:h14
-set linespace=5
+if has("gui_running")
+  set guifont=Meslo\ LG\ L\ DZ:h14
+  set linespace=5
+endif
 
 set background=dark
 let g:gruvbox_invert_selection=0
