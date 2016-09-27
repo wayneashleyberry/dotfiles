@@ -66,6 +66,12 @@ fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit; promptinit
 prompt pure
 
+# Custom Functions
+fpath=($HOME/.zsh/functions $fpath)
+autoload -U $HOME/.zsh/functions/*(:t)
+autoload -U compinit
+compinit
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
