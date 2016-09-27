@@ -78,10 +78,13 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Naviation
-alias gg='cd $(git rev-parse --show-toplevel)'
+# Browsing
 alias l="tree --dirsfirst -aFCNL 1"
 alias ll="tree --dirsfirst -ChFupDaLg 1"
+alias k="k -a"
+
+# Naviation
+alias gg='cd $(git rev-parse --show-toplevel)'
 alias ..='cd ..'
 alias ...='cd ...'
 alias ....='cd ....'
