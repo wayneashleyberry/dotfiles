@@ -48,15 +48,13 @@ alias rm='trash' # https://github.com/sindresorhus/trash-cli
 alias vi='nvim'
 alias vim='nvim'
 
-# Plugins
-source ~/.zsh/plugins/k/k.sh
-source ~/.zsh/plugins/z/z.sh
-
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
+antibody bundle supercrabtree/k
+antibody bundle rupa/z
 
 # Greeting Message
 $GOPATH/bin/dailyverse -pad
