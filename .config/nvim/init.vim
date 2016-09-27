@@ -71,7 +71,7 @@ set regexpengine=1 " Use the old regular expression engine (it's faster for cert
 set report=0 " Show all changes
 set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
-set shiftwidth=2 " The # of spaces for indenting
+set shiftwidth=4 " The # of spaces for indenting
 set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=0 " Never show the tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
