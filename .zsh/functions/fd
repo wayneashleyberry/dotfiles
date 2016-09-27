@@ -1,0 +1,5 @@
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
+  cd "$dir"
+}
