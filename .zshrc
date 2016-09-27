@@ -79,8 +79,8 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # Browsing
-alias l="tree --dirsfirst -aFCNL 1"
-alias ll="tree --dirsfirst -ChFupDaLg 1"
+alias l="tree --dirsfirst -FCNL 1"
+alias ll="tree --dirsfirst -ChFupDLg 1"
 alias k="k -a"
 
 # Naviation
