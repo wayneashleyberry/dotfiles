@@ -1811,7 +1811,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>795 186 445 77 0 0 1440 900 </string>
+	<string>799 247 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 420 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -1821,9 +1821,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>436 251 796 473 0 0 1440 900 </string>
+	<string>436 217 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>100 147 970 603 0 0 1440 900 </string>
+	<string>100 105 970 624 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>350 98 1090 675 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
