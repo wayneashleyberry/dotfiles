@@ -101,3 +101,4 @@ alias vim='nvim'
 
 # Plugins
 source ~/.zsh/plugins/k/k.sh
+source ~/.zsh/plugins/z/z.sh
