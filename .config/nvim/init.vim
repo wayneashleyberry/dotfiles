@@ -1,11 +1,12 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'joshdick/onedark.vim'
-Plug 'matze/vim-move'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'matze/vim-move'
 Plug 'morhetz/gruvbox'
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-commentary'
@@ -95,18 +96,6 @@ set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
 set relativenumber
 
-augroup ctrlp_config
-  autocmd!
-  let g:ctrlp_clear_cache_on_exit = 0 " Do not clear filenames cache, to improve CtrlP startup
-  let g:ctrlp_lazy_update = 40 " Set delay to prevent extra search
-  " let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } " Use python fuzzy matcher for better performance
-  " let g:ctrlp_max_files = 0 " Set no file limit, we are building a big project
-  let g:ctrlp_switch_buffer = 'Et' " Jump to tab AND buffer if already open
-  let g:ctrlp_open_new_file = 'r' " Open newly created files in the current window
-  let g:ctrlp_open_multiple_files = 'ij' " Open multiple files in hidden buffers, and jump to the first one
-  let g:ctrlp_working_path_mode = 0
-augroup END
-
 augroup vim_go
   autocmd!
   let g:go_fmt_command = "goimports"
@@ -126,3 +115,7 @@ augroup END
 nnoremap <leader><space> :noh<cr> " Clear search highlighting with <leader>space
 map <Tab> % " Use <Tab> for faster bracket matching
 map <leader>w :vsp<cr> " Open splits quickly
+
+command! Config :e $MYVIMRC
+
+map <C-p> :Files<CR>
