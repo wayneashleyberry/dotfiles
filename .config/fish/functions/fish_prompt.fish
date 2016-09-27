@@ -1,3 +1,5 @@
+# This prompt is based on https://github.com/lfiolhais/theme-simple-ass-prompt
+
 # Status Chars
 set __fish_git_prompt_char_dirtystate '!'
 set __fish_git_prompt_char_untrackedfiles '☡'
