@@ -1,9 +1,30 @@
+call plug#begin('~/.config/nvim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'airblade/vim-gitgutter'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
+Plug 'joshdick/onedark.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'matze/vim-move'
+Plug 'roman/golden-ratio'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/fish.vim',   { 'for': 'fish' }
+call plug#end()
+
 let mapleader = '\'
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-" set t_Co=256
-" set background=dark
-colorscheme molotov
+
+set background=dark
+let g:gruvbox_invert_selection=0
+let g:gruvbox_bold=0
+let g:airline_theme='gruvbox'
+color gruvbox
 
 set backupdir=~/.config/nvim/backups
 set directory=~/.config/nvim/swaps
@@ -75,23 +96,6 @@ set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
 set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
-
-call plug#begin('~/.config/nvim/plugged')
-Plug 'airblade/vim-gitgutter'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go'
-Plug 'joshdick/onedark.vim'
-Plug 'justinmk/vim-sneak'
-Plug 'matze/vim-move'
-Plug 'roman/golden-ratio'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-sensible'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/fish.vim',   { 'for': 'fish' }
-call plug#end()
 
 set relativenumber
 

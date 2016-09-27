@@ -1,11 +1,10 @@
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
-Plug 'joshdick/onedark.vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
@@ -18,10 +17,14 @@ call plug#end()
 
 let mapleader = '\'
 
-set background=dark
 set guifont=Meslo\ LG\ L\ DZ:h14
 set linespace=5
-colorscheme onedark
+
+set background=dark
+let g:gruvbox_invert_selection=0
+let g:gruvbox_bold=0
+let g:airline_theme='gruvbox'
+color gruvbox
 
 set guioptions=
 
