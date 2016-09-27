@@ -1,6 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -15,10 +14,11 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
+syntax off
+let g:syntax_on = "off"
 let mapleader = '\'
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 set background=dark
 let g:gruvbox_invert_selection=0
 let g:gruvbox_bold=0
@@ -37,6 +37,7 @@ set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set encoding=utf-8 nobomb " BOM often causes trouble
 set esckeys " Allow cursor keys in insert mode
 set expandtab " Expand tabs to spaces
+set tabstop=4 " Render tabs 4 spaces wide
 set foldcolumn=0 " Column to show folds
 set foldenable " Enable folding
 set foldlevel=5 " Open all folds by default
@@ -106,17 +107,18 @@ augroup ctrlp_config
   let g:ctrlp_switch_buffer = 'Et' " Jump to tab AND buffer if already open
   let g:ctrlp_open_new_file = 'r' " Open newly created files in the current window
   let g:ctrlp_open_multiple_files = 'ij' " Open multiple files in hidden buffers, and jump to the first one
+  let g:ctrlp_working_path_mode = 0
 augroup END
 
 augroup vim_go
   autocmd!
   let g:go_fmt_command = "goimports"
-  let g:go_highlight_build_constraints = 1
-  let g:go_highlight_fields = 1
-  let g:go_highlight_functions = 1
-  let g:go_highlight_methods = 1
-  let g:go_highlight_operators = 1
-  let g:go_highlight_types = 1
+  " let g:go_highlight_build_constraints = 1
+  " let g:go_highlight_fields = 1
+  " let g:go_highlight_functions = 1
+  " let g:go_highlight_methods = 1
+  " let g:go_highlight_operators = 1
+  " let g:go_highlight_types = 1
 augroup END
 
 augroup vim_move
@@ -129,3 +131,16 @@ nnoremap <leader><space> :noh<cr>
 
 " Use <Tab> for bracket matching
 map <Tab> %
+
+map <leader>w :vsp<cr>
+
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P

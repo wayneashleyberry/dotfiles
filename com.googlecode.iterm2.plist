@@ -1811,7 +1811,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>826 190 445 77 0 0 1440 877 </string>
+	<string>795 204 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 420 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -1821,9 +1821,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>345 408 796 473 0 0 1440 900 </string>
+	<string>436 319 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>220 205 898 555 0 0 1440 900 </string>
+	<string>84 57 1010 832 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>160 256 970 555 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2044,7 +2044,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Blur Radius</key>
@@ -2454,7 +2454,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGLDZ-Regular 14</string>
+			<string>FiraCode-Retina 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2505,6 +2505,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -2520,7 +2522,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.4</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>

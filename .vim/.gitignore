@@ -1,9 +1,0 @@
-.netrwhist
-backups/*
-!backups/.gitkeep
-swaps/*
-!swaps/.gitkeep
-undo/*
-!undo/.gitkeep
-plugged/*
-!plugged/.gitkeep

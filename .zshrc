@@ -25,11 +25,7 @@ autoload -U compinit
 compinit
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='nvim'
 
 # Browsing
 alias l="tree --dirsfirst -FCNL 1"
@@ -46,10 +42,14 @@ alias ....='cd ....'
 alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
-alias gh='git open' # https://github.com/paulirish/git-open
 
-# Vim
-alias vi='vim'
+# Node Modules
+alias gh='git open' # https://github.com/paulirish/git-open
+alias rm='trash' # https://github.com/sindresorhus/trash-cli
+
+# Vim / Neovim
+alias vi='nvim'
+alias vim='nvim'
 
 # Plugins
 source ~/.zsh/plugins/k/k.sh
