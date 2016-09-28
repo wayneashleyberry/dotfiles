@@ -19,6 +19,22 @@ let g:syntax_on = "off"
 filetype plugin indent on
 let mapleader = '\'
 
+" Perf
+set fillchars=diff:⣿,vert:│
+set fillchars=diff:⣿,vert:\|
+set synmaxcol=200
+set lazyredraw
+
+" Lines shouldn't be longer than 80 characters
+" http://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Line_length
+set textwidth=79
+set colorcolumn=80
+
+" Formatting, TextMate-style
+nnoremap Q gqip
+vnoremap Q gq
+nnoremap ql ^vg_gq
+
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
@@ -29,6 +45,7 @@ set directory=~/.config/nvim/swaps
 set undodir=~/.config/nvim/undo
 
 set clipboard+=unnamedplus " Use system clipboards when available
+set cursorline " Highlight the line the cursor is on
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set esckeys " Allow cursor keys in insert mode
@@ -52,7 +69,6 @@ set formatoptions+=1 " Break before 1-letter words
 set gdefault " By default add g flag to search/replace. Add g to toggle
 set hidden " When a buffer is brought to foreground, remember undo history and marks
 set ignorecase " Ignore case of searches
-set lazyredraw " Don't redraw when we don't have to
 set magic " Enable extended regexes
 set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
