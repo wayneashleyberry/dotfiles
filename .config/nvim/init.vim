@@ -54,7 +54,7 @@ set tabstop=4 " Render tabs 4 spaces wide
 set foldcolumn=0 " Column to show folds
 set foldenable " Enable folding
 set foldlevel=5 " Open all folds by default
-set foldmethod=syntax " Syntax are used to specify folds
+set foldmethod=indent " Indentation is used to specify folds
 set foldminlines=0 " Allow folding single lines
 set foldnestmax=5 " Set max fold nesting level
 set formatoptions=
