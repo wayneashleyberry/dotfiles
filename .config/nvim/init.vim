@@ -16,7 +16,6 @@ call plug#end()
 
 syntax off
 let g:syntax_on = "off"
-filetype plugin indent on
 let mapleader = '\'
 
 " Perf
