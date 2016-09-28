@@ -57,4 +57,5 @@ antibody bundle sindresorhus/pure
 # antibody bundle rupa/z
 
 # Greeting Message
+echo ""
 $GOPATH/bin/dailyverse -pad
