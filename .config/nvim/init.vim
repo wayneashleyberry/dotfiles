@@ -43,6 +43,7 @@ color molotov
 set backupdir=~/.config/nvim/backups
 set directory=~/.config/nvim/swaps
 set undodir=~/.config/nvim/undo
+set noswapfile
 
 set clipboard+=unnamedplus " Use system clipboards when available
 set cursorline " Highlight the line the cursor is on
@@ -118,6 +119,12 @@ augroup vim_move
   autocmd!
   let g:move_key_modifier = 'C'
 augroup END
+
+" Modern directional keys
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
 
 nnoremap <leader><space> :noh<cr>
 map <Tab> %
