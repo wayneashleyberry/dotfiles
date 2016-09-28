@@ -6,3 +6,5 @@ undo/*
 !undo/.gitkeep
 plugged/*
 !plugged/.gitkeep
+view/*
+!view/.gitkeep
