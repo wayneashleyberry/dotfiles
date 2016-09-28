@@ -45,7 +45,7 @@ set undodir=~/.config/nvim/undo
 set noswapfile
 
 set clipboard+=unnamedplus " Use system clipboards when available
-set cursorline " Highlight the line the cursor is on
+" set cursorline " Highlight the line the cursor is on
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set esckeys " Allow cursor keys in insert mode
