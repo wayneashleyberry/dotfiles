@@ -105,7 +105,7 @@ augroup END
 
 nnoremap <leader><space> :noh<cr>
 map <Tab> %
-map <leader>w :vsp<cr> " Open splits quickly
+map <leader>w :vsp<cr>
 map <C-p> :Files<CR>
 
 command! Config :e $MYVIMRC
