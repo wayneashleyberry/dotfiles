@@ -108,7 +108,7 @@ map <Tab> %
 map <leader>w :vsp<cr>
 map <C-p> :Files<CR>
 
-command! Config :e $MYVIMRC
+command! Config :vs $MYVIMRC
 
 " Autosave
 au FocusLost * :silent! wa!
