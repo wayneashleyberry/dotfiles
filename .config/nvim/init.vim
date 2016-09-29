@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'css', 'html', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
