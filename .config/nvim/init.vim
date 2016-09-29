@@ -25,8 +25,7 @@ set lazyredraw
 
 " Lines shouldn't be longer than 80 characters
 " http://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Line_length
-set textwidth=79
-" set colorcolumn=80
+set textwidth=80
 
 " Formatting, TextMate-style
 nnoremap Q gqip
