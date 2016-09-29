@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'css', 'html', 'javascript']}
+Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'css', 'html', 'javascript', 'javascript.jsx']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -14,8 +14,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
-syntax off
-let g:syntax_on = "off"
 let mapleader = '\'
 
 " Perf
