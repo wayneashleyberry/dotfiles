@@ -125,8 +125,13 @@ map <Tab> %
 map <leader>w :vsp<cr>
 map <C-p> :Files<CR>
 
-command! Config :vs $MYVIMRC
+command! Config :e $MYVIMRC
 
 " Autosave
 au FocusLost * :silent! wa!
 au BufLeave * :silent! wa!
+
+" Git Gutter
+let g:gitgutter_sign_column_always = 1
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
