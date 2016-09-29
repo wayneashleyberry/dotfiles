@@ -73,7 +73,7 @@ set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
-set nowrap " Do not wrap lines
+set breakindent " When wrapping lines use the same indentation
 set nu " Enable line numbers
 set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
 set report=0 " Show all changes
