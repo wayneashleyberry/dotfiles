@@ -59,3 +59,5 @@ antibody bundle sindresorhus/pure
 # Greeting Message
 echo ""
 $GOPATH/bin/dailyverse -pad
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
