@@ -1,11 +1,11 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'justinmk/vim-sneak'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'roman/golden-ratio'
@@ -69,7 +69,8 @@ set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
-set breakindent " When wrapping lines use the same indentation
+" set breakindent " When wrapping lines use the same indentation
+set nowrap
 set nu " Enable line numbers
 set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
 set report=0 " Show all changes
@@ -130,8 +131,3 @@ command! Config :e $MYVIMRC
 " Autosave
 au FocusLost * :silent! wa!
 au BufLeave * :silent! wa!
-
-" Git Gutter
-let g:gitgutter_sign_column_always = 1
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
