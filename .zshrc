@@ -46,7 +46,6 @@ alias rm='trash' # https://github.com/sindresorhus/trash-cli
 
 # Vim / Neovim
 alias vi='nvim'
-alias vim='nvim'
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
