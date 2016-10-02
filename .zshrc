@@ -24,8 +24,8 @@ compinit
 export EDITOR='nvim'
 
 # Browsing
-alias l="tree --dirsfirst -FCNL 1"
-alias ll="tree --dirsfirst -ChFupDLg 1"
+alias l="tree --dirsfirst -aFCNL 1"
+alias ll="tree --dirsfirst -aChFupDLg 1"
 alias k="k -a"
 
 # Naviation
@@ -52,11 +52,11 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
-# antibody bundle supercrabtree/k
-# antibody bundle rupa/z
+antibody bundle zsh-users/zsh-syntax-highlighting
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Greeting Message
 echo ""
 $GOPATH/bin/dailyverse -pad
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
