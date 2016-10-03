@@ -34,9 +34,6 @@ alias k="k -a"
 
 # Naviation
 alias gg='cd $(git rev-parse --show-toplevel)'
-alias ..='cd ..'
-alias ...='cd ...'
-alias ....='cd ....'
 
 # Git
 alias g='git'
