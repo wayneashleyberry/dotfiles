@@ -3,20 +3,20 @@ unsetopt flowcontrol
 setopt auto_menu # show completion menu on succesive tab press
 setopt complete_in_word
 setopt always_to_end
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
-# Go Workspace (https://golang.org/doc/code.html)
+# Go
 export GOPATH=$HOME
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin
 
-# Pure Prompt (https://github.com/sindresorhus/pure)
-fpath=( "$HOME/.zfunctions" $fpath )
-autoload -U promptinit; promptinit
-prompt pure
+# Rust
+export CARGOPATH=$HOME/.cargo
+
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin
 
 # Custom Functions
 fpath=($HOME/.zsh/functions $fpath)
@@ -25,15 +25,11 @@ autoload -U compinit
 compinit
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='nvim'
 
 # Browsing
-alias l="tree --dirsfirst -FCNL 1"
-alias ll="tree --dirsfirst -ChFupDLg 1"
+alias l="tree --dirsfirst -aFCNL 1"
+alias ll="tree --dirsfirst -aChFupDLg 1"
 alias k="k -a"
 
 # Naviation
@@ -43,17 +39,29 @@ alias ...='cd ...'
 alias ....='cd ....'
 
 # Git
+alias g='git'
 alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
+
+# Node Modules
 alias gh='git open' # https://github.com/paulirish/git-open
+alias rm='trash' # https://github.com/sindresorhus/trash-cli
 
-# Vim
-alias vi='vim'
+# Google Play
+play() {
+    open "https://play.google.com/music/listen?u=0#/sr/$1"
+}
 
-# Plugins
-source ~/.zsh/plugins/k/k.sh
-source ~/.zsh/plugins/z/z.sh
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
+
+source <(antibody init)
+antibody bundle mafredri/zsh-async
+antibody bundle sindresorhus/pure
+antibody bundle zsh-users/zsh-syntax-highlighting
 
 # Greeting Message
+echo ""
 $GOPATH/bin/dailyverse -pad
