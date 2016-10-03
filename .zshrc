@@ -10,9 +10,13 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
-# Go Workspace (https://golang.org/doc/code.html)
+# Go
 export GOPATH=$HOME
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin
+
+# Rust
+export CARGOPATH=$HOME/.cargo
+
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin
 
 # Custom Functions
 fpath=($HOME/.zsh/functions $fpath)
@@ -44,18 +48,19 @@ alias gca='git commit -am'
 alias gh='git open' # https://github.com/paulirish/git-open
 alias rm='trash' # https://github.com/sindresorhus/trash-cli
 
-# Vim / Neovim
-alias vi='nvim'
+# Google Play
+play() {
+    open "https://play.google.com/music/listen?u=0#/sr/$1"
+}
 
-export FZF_DEFAULT_COMMAND='ag -g ""'
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
 
 source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Greeting Message
 echo ""
