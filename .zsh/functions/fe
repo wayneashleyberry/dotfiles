@@ -1,4 +1,0 @@
-fe() {
-  local declare files=($(fzf --query="$1" --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
-}
