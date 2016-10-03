@@ -43,7 +43,7 @@ alias rm='trash' # https://github.com/sindresorhus/trash-cli
 
 # Google Play
 play() {
-    open "https://play.google.com/music/listen?u=0#/sr/$1"
+    open "https://play.google.com/music/listen?u=0#/sr/${*:gs/ /+}"
 }
 
 # FZF
