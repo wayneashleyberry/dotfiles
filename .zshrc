@@ -69,6 +69,9 @@ antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
 
+# Hipster prompt symbols
+PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
+
 # Greeting Message
 echo ""
 $GOPATH/bin/dailyverse -pad
