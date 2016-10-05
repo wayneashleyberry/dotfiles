@@ -1,3 +1,4 @@
+.netrwhist
 backups/*
 !backups/.gitkeep
 swaps/*
