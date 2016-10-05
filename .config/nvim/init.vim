@@ -131,3 +131,5 @@ command! Config :e $MYVIMRC
 " Autosave
 au FocusLost * :silent! wa!
 au BufLeave * :silent! wa!
+
+nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>5jelelli
