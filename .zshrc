@@ -1,4 +1,3 @@
-# These settings have shamelessly been stolen from oh-my-zsh
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
 unsetopt menu_complete
 unsetopt flowcontrol
@@ -11,6 +10,25 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/history.zsh
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+case $HIST_STAMPS in
+  "mm/dd/yyyy") alias history='fc -fl 1' ;;
+  "dd.mm.yyyy") alias history='fc -El 1' ;;
+  "yyyy-mm-dd") alias history='fc -il 1' ;;
+  *) alias history='fc -l 1' ;;
+esac
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history # share command history data
 
 # Go
 export GOPATH=$HOME
@@ -30,6 +48,10 @@ alias ll="tree --dirsfirst -aChFupDLg 1"
 
 # Naviation
 alias gg='cd $(git rev-parse --show-toplevel)'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 # Git
 alias g='git'
@@ -49,6 +71,7 @@ play() {
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
+export FZF_DEFAULT_OPTS='--prompt="△ "'
 
 fd() {
   local dir
@@ -68,6 +91,12 @@ source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
+
+# Hipster prompt symbols
+PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
+
+# This makes things work...
+autoload -U compinit && compinit
 
 # Greeting Message
 echo ""
