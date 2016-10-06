@@ -51,7 +51,6 @@ set ignorecase " Ignore case of searches
 set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
 set noshowmode " Don't show the current mode (lightline.vim takes care of us)
-set showcmd " Show command while they're being typed
 set nostartofline " Don't reset cursor to start of line when moving around
 set nowrap " Don't wrap text
 set number relativenumber " Line numbers
@@ -60,7 +59,6 @@ set report=0 " Show all changes
 set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shiftwidth=4 " The # of spaces for indenting
-set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=0 " Never show the tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
@@ -115,3 +113,10 @@ nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.ht
 nnoremap Q gqip
 vnoremap Q gq
 nnoremap ql ^vg_gq
+
+" Abbreviations
+" Fix some common and easy mistakes when typing commands:
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
