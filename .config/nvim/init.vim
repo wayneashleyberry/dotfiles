@@ -74,7 +74,8 @@ set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
-set list listchars=eol:¬,extends:…,precedes:❮,extends:❯,trail:·
+set wildignorecase " Ignore case when completing filenames and directories
+set list listchars=eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -141,3 +142,16 @@ nnoremap N Nzzzv
 " Same when moving up and down
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
+
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+if !has('gui_running')
+  set notimeout
+  set ttimeout
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
