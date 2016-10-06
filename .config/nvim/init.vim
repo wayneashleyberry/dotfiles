@@ -35,7 +35,7 @@ set noswapfile
 set undofile
 set textwidth=80
 set clipboard^=unnamedplus,unnamed
-set esckeys " Allow cursor keys in insert mode
+set noesckeys " Faster escaping from insert mode
 set expandtab " Expand tabs to spaces
 set tabstop=4 " Render tabs 4 spaces wide
 set formatoptions=
@@ -117,7 +117,6 @@ nnoremap Q gqip
 vnoremap Q gq
 nnoremap ql ^vg_gq
 
-" Abbreviations
 " Fix some common and easy mistakes when typing commands:
 cnoreabbrev W w
 cnoreabbrev Q q
@@ -129,3 +128,7 @@ nmap <C-]> >>
 nmap <C-[> <<
 vmap <C-[> <gv
 vmap <C-]> >gv
+
+" Change the cursor shape in normal/insert mode
+" https://github.com/neovim/neovim/wiki/FAQ#how-can-i-change-the-cursor-shape-in-the-terminal
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
