@@ -30,6 +30,8 @@ let mapleader = '\'
 
 color molotov
 
+set nobackup
+set noswapfile
 set undofile
 set textwidth=80
 set clipboard^=unnamedplus,unnamed
