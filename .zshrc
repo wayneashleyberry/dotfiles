@@ -48,10 +48,8 @@ alias ll="tree --dirsfirst -aChFupDLg 1"
 
 # Naviation
 alias gg='cd $(git rev-parse --show-toplevel)'
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
-alias -g ......='../../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # Git
 alias g='git'
