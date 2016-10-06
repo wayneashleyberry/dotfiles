@@ -17,7 +17,7 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
@@ -47,8 +47,6 @@ set relativenumber
 set splitbelow
 set splitright
 set termguicolors
-set undofile
-set undodir=~/.vim/undo
 set visualbell
 
 command! Config :e $MYVIMRC
