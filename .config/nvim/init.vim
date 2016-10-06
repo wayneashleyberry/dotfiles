@@ -75,7 +75,7 @@ set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
 set wildignorecase " Ignore case when completing filenames and directories
-set list listchars=eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
+set list listchars=tab:\ \ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
 
 " vim-go
 let g:go_fmt_command = "goimports"
