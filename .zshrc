@@ -98,6 +98,9 @@ PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
 # This makes things work...
 autoload -U compinit && compinit
 
+# Bitch, please.
+bindkey -v
+
 # Greeting Message
 echo ""
 $GOPATH/bin/dailyverse -pad
