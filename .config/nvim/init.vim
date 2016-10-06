@@ -41,7 +41,7 @@ color molotov
 set nobackup
 set noswapfile
 set undofile
-set undodir='~/.config/nvim/undo'
+set undodir='~/.config/nvim/undo' " Set the undo directory explicitly so that MacVim uses it as well
 set textwidth=80
 set clipboard^=unnamedplus,unnamed
 set noesckeys " Exit insert mode faster
