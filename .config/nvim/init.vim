@@ -38,12 +38,16 @@ let mapleader = '\'
 
 color molotov
 
+" Use system clipboard from terminal vim/neovim
+if (has('!gui_macvim'))
+    set clipboard^=unnamedplus,unnamed
+endif
+
 set nobackup
 set noswapfile
 set undofile
-set undodir='~/.config/nvim/undo' " Set the undo directory explicitly so that MacVim uses it as well
+set undodir='~/.config/nvim/undo/' " Set the undo directory explicitly so that MacVim uses it as well
 set textwidth=80
-set clipboard^=unnamedplus,unnamed
 set noesckeys " Exit insert mode faster
 set expandtab " Expand tabs to spaces
 set tabstop=4 " Render tabs 4 spaces wide
