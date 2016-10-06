@@ -48,10 +48,13 @@ alias ll="tree --dirsfirst -aChFupDLg 1"
 
 # Naviation
 alias gg='cd $(git rev-parse --show-toplevel)'
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
-alias -g ......='../../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Vim / Neovim
+alias vim='nvim'
+alias vi='nvim'
+alias :e='nvim'
 
 # Git
 alias g='git'
@@ -97,6 +100,9 @@ PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
 
 # This makes things work...
 autoload -U compinit && compinit
+
+# Bitch, please.
+bindkey -v
 
 # Greeting Message
 echo ""
