@@ -74,7 +74,7 @@ set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
-set list listchars=eol:¬
+set list listchars=eol:¬,extends:…,precedes:❮,extends:❯,trail:·
 
 " vim-go
 let g:go_fmt_command = "goimports"
