@@ -120,3 +120,9 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Wq wq
 cnoreabbrev WQ wq
+
+" Indent lines with ctrl+[ and ctrl+]
+nmap <C-]> >>
+nmap <C-[> <<
+vmap <C-[> <gv
+vmap <C-]> >gv
