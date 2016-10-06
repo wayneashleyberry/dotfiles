@@ -93,7 +93,7 @@ noremap gk k
 " Clear search highlighting using the <space> key
 nnoremap <leader><space> :noh<cr>
 
-" Tab through brackets and braces etc.
+" Use <Tab> for bracket matching
 map <Tab> %
 
 " Open a split window and switch to it
