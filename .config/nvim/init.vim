@@ -35,7 +35,7 @@ set noswapfile
 set undofile
 set textwidth=80
 set clipboard^=unnamedplus,unnamed
-set noesckeys " Faster escaping from insert mode
+set noesckeys " Exit insert mode faster
 set expandtab " Expand tabs to spaces
 set tabstop=4 " Render tabs 4 spaces wide
 set formatoptions=
@@ -123,12 +123,6 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Wq wq
 cnoreabbrev WQ wq
-
-" Indent lines with ctrl+[ and ctrl+]
-nmap <C-]> >>
-nmap <C-[> <<
-vmap <C-[> <gv
-vmap <C-]> >gv
 
 " Change the cursor shape in normal/insert mode
 " https://github.com/neovim/neovim/wiki/FAQ#how-can-i-change-the-cursor-shape-in-the-terminal
