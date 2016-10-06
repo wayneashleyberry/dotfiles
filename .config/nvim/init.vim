@@ -50,7 +50,8 @@ set hidden " When a buffer is brought to foreground, remember undo history and m
 set ignorecase " Ignore case of searches
 set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
-set noshowmode " Don't show the current mode (airline.vim takes care of us)
+set noshowmode " Don't show the current mode (lightline.vim takes care of us)
+set showcmd " Show command while they're being typed
 set nostartofline " Don't reset cursor to start of line when moving around
 set nowrap " Don't wrap text
 set number relativenumber " Line numbers
@@ -66,16 +67,13 @@ set smartcase " Ignore 'ignorecase' if search patter contains uppercase characte
 set softtabstop=2 " Tab key results in 2 spaces
 set splitbelow " New window goes below
 set splitright " New windows goes right
-set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.brf,.cb,.dmg,.exe,.ind,.idx,.ilg,.inx,.out,.toc,.pyc,.pyd,.dll
 set title " Show the filename in the window titlebar
 set termguicolors " Enable true color support
-set viminfo=%,'9999,s512 " Restore buffer list, marks are remembered for 9999 files, registers up to 512Kb are remembered
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
-set wrapscan " Searches wrap around end of file
 
 " vim-go
 let g:go_fmt_command = "goimports"
