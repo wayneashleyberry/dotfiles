@@ -132,3 +132,12 @@ vmap <C-]> >gv
 " Change the cursor shape in normal/insert mode
 " https://github.com/neovim/neovim/wiki/FAQ#how-can-i-change-the-cursor-shape-in-the-terminal
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Same when moving up and down
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
