@@ -51,6 +51,11 @@ alias gg='cd $(git rev-parse --show-toplevel)'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# Vim / Neovim
+alias vim='nvim'
+alias vi='nvim'
+alias :e='nvim'
+
 # Git
 alias g='git'
 alias br='git checkout -b'
