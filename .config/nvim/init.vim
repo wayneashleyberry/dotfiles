@@ -43,10 +43,13 @@ if (has('!gui_macvim'))
     set clipboard^=unnamedplus,unnamed
 endif
 
+if has('persistent_undo')
+  set undofile
+  set undodir=~/.config/nvim/undo//
+endif
+
 set nobackup
 set noswapfile
-set undofile
-set undodir='~/.config/nvim/undo/' " Set the undo directory explicitly so that MacVim uses it as well
 set textwidth=80
 set noesckeys " Exit insert mode faster
 set expandtab " Expand tabs to spaces
