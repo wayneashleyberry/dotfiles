@@ -13,14 +13,22 @@
 "             \\ "
 "              '=='
 "
+set nocompatible
+filetype plugin on
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+if (has('gui_macvim'))
+    Plug 'ctrlpvim/ctrlp.vim'
+else
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
+endif
 Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
@@ -33,6 +41,7 @@ color molotov
 set nobackup
 set noswapfile
 set undofile
+set undodir='~/.config/nvim/undo'
 set textwidth=80
 set clipboard^=unnamedplus,unnamed
 set noesckeys " Exit insert mode faster
@@ -100,7 +109,11 @@ map <Tab> %
 map <leader>w :vsp<cr>
 
 " Fuzzy file finder
-map <C-p> :Files<CR>
+if (has('gui_macvim'))
+  let g:ctrlp_working_path_mode = 0
+else
+    map <C-p> :Files<CR>
+endif
 
 " Edit and source config files
 command! Config :e $MYVIMRC
