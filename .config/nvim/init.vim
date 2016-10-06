@@ -14,7 +14,6 @@
 "              '=='
 "
 set nocompatible
-filetype plugin on
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
@@ -74,7 +73,6 @@ set nowrap " Don't wrap text
 set number relativenumber " Line numbers
 set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
 set report=0 " Show all changes
-set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shiftwidth=4 " The # of spaces for indenting
 set showtabline=0 " Never show the tab bar
@@ -161,8 +159,6 @@ noremap <C-u> <C-u>zz
 " Basically this makes terminal Vim work sanely.
 if !has('gui_running')
   set notimeout
-  set ttimeout
-  set ttimeoutlen=10
   augroup FastEscape
     autocmd!
     au InsertEnter * set timeoutlen=0
