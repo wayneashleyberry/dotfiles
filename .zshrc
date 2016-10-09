@@ -36,8 +36,8 @@ export GOPATH=$HOME
 # Rust
 export CARGOPATH=$HOME/.cargo
 
-# PATH (Homebrew, Go, Rust etc)
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin
+# PATH (Homebrew, Go, Rust, Composer etc)
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin:$HOME/.composer/vendor/bin
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
