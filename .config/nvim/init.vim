@@ -14,7 +14,6 @@
 "              '=='
 "
 call plug#begin('~/.config/nvim/plugged')
-Plug 'morhetz/gruvbox'
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
@@ -30,25 +29,21 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
-Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 let mapleader = '\'
 
-" set background=dark
-" let g:gruvbox_invert_selection=0
-" let g:gruvbox_sign_column='bg0'
-" color gruvbox
-
 color molotov
 
-" Use system clipboard from terminal vim/neovim
+" Use system clipboard from terminal vim/neovim:
 if (has('!gui_macvim'))
     set clipboard^=unnamedplus,unnamed
 endif
 
 if has('persistent_undo')
   set undofile
+  " Although neovim has a good default for undodir, vim and macvim do not… so for
+  " consistency we'll set it explicitly here:
   set undodir=~/.config/nvim/undo//
 endif
 
@@ -75,7 +70,7 @@ set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join
 set noshowmode " Don't show the current mode (lightline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
 set nowrap " Don't wrap text
-set number relativenumber " Line numbers
+" set number relativenumber " Line numbers
 set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
 set report=0 " Show all changes
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
@@ -95,7 +90,7 @@ set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
 set wildignorecase " Ignore case when completing filenames and directories
-set list listchars=tab:\ \ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
+set list listchars=tab:\|\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -136,7 +131,7 @@ au FocusLost * :silent! wa!
 au BufLeave * :silent! wa!
 
 " Snippets
-nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>5jelelli
+nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>/><<CR>:set nohlsearch<CR>a
 
 " TextMate style formatting
 nnoremap Q gqip
@@ -149,12 +144,12 @@ cnoreabbrev Q q
 cnoreabbrev Wq wq
 cnoreabbrev WQ wq
 
-" Change the cursor shape in normal/insert mode
+" Change the cursor shape in normal/insert mode:
 " https://github.com/neovim/neovim/wiki/FAQ#how-can-i-change-the-cursor-shape-in-the-terminal
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-" Search mappings: These will make it so that going to the next one in a
-" search will center on the line it's found in.
+" These will make it so that going to the next result in a search will center on
+" the line it's found in.
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
