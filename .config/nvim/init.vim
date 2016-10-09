@@ -14,22 +14,23 @@
 "              '=='
 "
 call plug#begin('~/.config/nvim/plugged')
-Plug 'neomake/neomake'
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
-if (has('gui_macvim'))
-    Plug 'ctrlpvim/ctrlp.vim'
-else
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
-endif
 Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
+if (has('gui_macvim'))
+    Plug 'ctrlpvim/ctrlp.vim'
+endif
+if (has('nvim'))
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
+    Plug 'neomake/neomake'
+endif
 call plug#end()
 
 let mapleader = '\'
@@ -172,5 +173,7 @@ if !has('gui_running')
 endif
 
 " Neomake
+if (has('nvim'))
 autocmd! BufReadPost,BufWritePost * Neomake
 let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
+endif
