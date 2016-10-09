@@ -14,6 +14,7 @@
 "              '=='
 "
 call plug#begin('~/.config/nvim/plugged')
+Plug 'neomake/neomake'
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
@@ -169,3 +170,7 @@ if !has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
+" Neomake
+autocmd! BufReadPost,BufWritePost * Neomake
+let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
