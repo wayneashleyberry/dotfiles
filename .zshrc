@@ -73,8 +73,11 @@ play() {
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
 export FZF_DEFAULT_OPTS='--prompt="△ "'
+
+# FZF + RIPGREP
+# https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2#.s8ysnb1wv
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
 
 fd() {
   local dir
