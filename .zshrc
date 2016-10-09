@@ -52,9 +52,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Vim / Neovim
-alias vim='nvim'
-alias vi='nvim'
-alias :e='nvim'
+if type nvim > /dev/null 2>&1; then
+  alias vi='nvim'
+  alias vim='nvim'
+fi
 
 # Git
 alias g='git'
@@ -75,10 +76,7 @@ play() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--prompt="△ "'
 
-# FZF + RIPGREP
-# https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2#.s8ysnb1wv
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
-
+# fd is like cd, but fuzzy
 fd() {
   local dir
   dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&

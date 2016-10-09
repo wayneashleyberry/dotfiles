@@ -44,7 +44,7 @@ if has('persistent_undo')
   set undofile
   " Although neovim has a good default for undodir, vim and macvim do not… so for
   " consistency we'll set it explicitly here:
-  set undodir=~/.config/nvim/undo//
+  set undodir=$HOME/.config/nvim/undo//
 endif
 
 set nobackup
@@ -156,3 +156,16 @@ nnoremap N Nzzzv
 " Same when moving up and down
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
+
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+if !has('gui_running')
+  set notimeout
+  set ttimeout
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
