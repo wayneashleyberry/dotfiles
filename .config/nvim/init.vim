@@ -13,9 +13,8 @@
 "             \\ "
 "              '=='
 "
-set nocompatible
-
 call plug#begin('~/.config/nvim/plugged')
+Plug 'morhetz/gruvbox'
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
@@ -31,9 +30,15 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 let mapleader = '\'
+
+" set background=dark
+" let g:gruvbox_invert_selection=0
+" let g:gruvbox_sign_column='bg0'
+" color gruvbox
 
 color molotov
 
@@ -75,6 +80,7 @@ set regexpengine=1 " Use the old regular expression engine (it's faster for cert
 set report=0 " Show all changes
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shiftwidth=4 " The # of spaces for indenting
+set shortmess=I " Hides welcome message
 set showtabline=0 " Never show the tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
@@ -117,6 +123,7 @@ map <leader>w :vsp<cr>
 if (has('gui_macvim'))
   let g:ctrlp_working_path_mode = 0
 else
+    map <C-b> :Buffers<CR>
     map <C-p> :Files<CR>
 endif
 
@@ -154,14 +161,3 @@ nnoremap N Nzzzv
 " Same when moving up and down
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
-
-" Time out on key codes but not mappings.
-" Basically this makes terminal Vim work sanely.
-if !has('gui_running')
-  set notimeout
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
