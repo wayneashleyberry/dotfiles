@@ -1,3 +1,13 @@
+### NPM Scripts
+
+```sh
+brew install node
+```
+
+```sh
+npm i -g trash-cli git-open
+```
+
 ### Composer Scripts
 
 ```sh

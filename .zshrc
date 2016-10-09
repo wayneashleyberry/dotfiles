@@ -83,11 +83,6 @@ fd() {
   cd "$dir"
 }
 
-fe() {
-  local declare files=($(fzf --query="$1" --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
-}
-
 # Pure
 PURE_CMD_MAX_EXEC_TIME=10
 
