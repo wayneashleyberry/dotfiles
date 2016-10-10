@@ -18,7 +18,6 @@ Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
-Plug 'neomake/neomake'
 Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -28,6 +27,7 @@ if (has('gui_macvim'))
     Plug 'ctrlpvim/ctrlp.vim'
 endif
 if (has('nvim'))
+    Plug 'neomake/neomake'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 endif
@@ -174,6 +174,8 @@ if !has('gui_running')
 endif
 
 " Neomake
-autocmd! BufReadPost,BufWritePost * Neomake
-let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
-let g:neomake_javascript_enabled_makers = ['eslint']
+if (has('nvim'))
+    autocmd! BufReadPost,BufWritePost * Neomake
+    let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
+    let g:neomake_javascript_enabled_makers = ['eslint']
+endif
