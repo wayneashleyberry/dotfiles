@@ -23,11 +23,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
+Plug 'neomake/neomake'
 if (has('gui_macvim'))
     Plug 'ctrlpvim/ctrlp.vim'
 endif
 if (has('nvim'))
-    Plug 'neomake/neomake'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 endif
@@ -113,7 +113,12 @@ map <leader>w :vsp<cr>
 
 " Fuzzy file finder
 if (has('gui_macvim'))
-  let g:ctrlp_working_path_mode = 0
+    let g:ctrlp_working_path_mode = 0
+    if executable('/usr/local/bin/ag')
+        set grepprg=/usr/local/bin/ag\ --nogroup\ --nocolor
+        let g:ctrlp_user_command = '/usr/local/bin/ag %s -l --nocolor -g ""'
+        let g:ctrlp_use_caching = 0
+    endif
 else
     map <C-b> :Buffers<CR>
     map <C-p> :Files<CR>
@@ -174,8 +179,8 @@ if !has('gui_running')
 endif
 
 " Neomake
-if (has('nvim'))
-    autocmd! BufReadPost,BufWritePost * Neomake
-    let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
-    let g:neomake_javascript_enabled_makers = ['eslint']
-endif
+autocmd! FocusLost,BufReadPost,BufWritePost * Neomake
+" let g:neomake_verbose = 3
+" let g:neomake_open_list = 2
+let g:neomake_php_enabled_makers = ['php', 'phpcs']
+let g:neomake_javascript_enabled_makers = ['eslint']

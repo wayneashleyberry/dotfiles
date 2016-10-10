@@ -51,14 +51,7 @@ alias gg='cd $(git rev-parse --show-toplevel)'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# Vim / Neovim
-if type nvim > /dev/null 2>&1; then
-  alias vi='nvim'
-  alias vim='nvim'
-fi
-
 # Git
-alias g='git'
 alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
