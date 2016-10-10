@@ -157,7 +157,7 @@ noremap <C-u> <C-u>zz
 " Yank to system clipboard
 if !has('gui_running')
     nnoremap y "*y
-    nnoremap yy "*yy
+    vnoremap y "*y
 endif
 
 " Time out on key codes but not mappings.
