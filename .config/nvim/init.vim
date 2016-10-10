@@ -37,11 +37,6 @@ let mapleader = '\'
 
 color molotov
 
-" Use system clipboard from terminal vim/neovim:
-if (has('!gui_macvim'))
-    set clipboard^=unnamedplus,unnamed
-endif
-
 if has('persistent_undo')
   set undofile
   " Although neovim has a good default for undodir, vim and macvim do not… so for
@@ -159,6 +154,12 @@ nnoremap N Nzzzv
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
 
+" Yank to system clipboard
+if !has('gui_running')
+    nnoremap y "*y
+    nnoremap yy "*yy
+endif
+
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 if !has('gui_running')
@@ -174,6 +175,7 @@ endif
 
 " Neomake
 if (has('nvim'))
-autocmd! BufReadPost,BufWritePost * Neomake
-let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
+    autocmd! BufReadPost,BufWritePost * Neomake
+    let g:neomake_php_enabled_makers = ['php', 'phpcs', 'phpmd']
+    let g:neomake_javascript_enabled_makers = ['eslint']
 endif
