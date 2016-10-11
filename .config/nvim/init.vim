@@ -72,8 +72,7 @@ set regexpengine=1 " Use the old regular expression engine (it's faster for cert
 set report=0 " Show all changes
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shiftwidth=4 " The # of spaces for indenting
-set shortmess=I " Hides welcome message
-set showtabline=0 " Never show the tab bar
+set showtabline=1 " Show the tab bar, if there are tabs
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
 set softtabstop=2 " Tab key results in 2 spaces
