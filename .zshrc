@@ -36,8 +36,8 @@ export GOPATH=$HOME
 # Rust
 export CARGOPATH=$HOME/.cargo
 
-# PATH (Homebrew, Go, Rust etc)
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin
+# PATH (Homebrew, Go, Rust, Composer etc)
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin:$HOME/.composer/vendor/bin
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
@@ -51,13 +51,7 @@ alias gg='cd $(git rev-parse --show-toplevel)'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# Vim / Neovim
-alias vim='nvim'
-alias vi='nvim'
-alias :e='nvim'
-
 # Git
-alias g='git'
 alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
@@ -73,18 +67,13 @@ play() {
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
 export FZF_DEFAULT_OPTS='--prompt="△ "'
 
+# fd is like cd, but fuzzy
 fd() {
   local dir
   dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
   cd "$dir"
-}
-
-fe() {
-  local declare files=($(fzf --query="$1" --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
 # Pure
