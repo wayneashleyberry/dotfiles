@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D3A3D420-7449-45B6-B955-913C05A78C27</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>819B7B1D-0814-4C19-86A9-50B98DB1DF52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Wayne Ashley Berry</string>
@@ -45,6 +58,23 @@
 	<string>Apps</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/iTerm.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>5EBFFB44-34C3-4851-BA2A-4201E677B9BA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -77,7 +107,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/iTerm.app</string>
+					<string>/usr/local/Cellar/macvim/8.0-110_1/MacVim.app</string>
 				</array>
 				<key>toggle</key>
 				<false/>
@@ -85,9 +115,36 @@
 			<key>type</key>
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
-			<string>5EBFFB44-34C3-4851-BA2A-4201E677B9BA</string>
+			<string>819B7B1D-0814-4C19-86A9-50B98DB1DF52</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>47</integer>
+				<key>hotmod</key>
+				<integer>1310720</integer>
+				<key>hotstring</key>
+				<string>.</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D3A3D420-7449-45B6-B955-913C05A78C27</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -158,6 +215,20 @@
 			<integer>500</integer>
 			<key>ypos</key>
 			<real>130</real>
+		</dict>
+		<key>819B7B1D-0814-4C19-86A9-50B98DB1DF52</key>
+		<dict>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
+		<key>D3A3D420-7449-45B6-B955-913C05A78C27</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<integer>250</integer>
 		</dict>
 		<key>D5421059-6E74-469E-8951-3DA1B78CA3E4</key>
 		<dict>
