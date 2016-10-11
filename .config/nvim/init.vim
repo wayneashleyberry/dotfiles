@@ -26,8 +26,7 @@ Plug 'tpope/vim-sensible'
 Plug 'neomake/neomake'
 if (has('gui_macvim'))
     Plug 'ctrlpvim/ctrlp.vim'
-endif
-if (has('nvim'))
+else
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 endif
@@ -132,7 +131,6 @@ nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.ht
 " TextMate style formatting
 nnoremap Q gqip
 vnoremap Q gq
-nnoremap ql ^vg_gq
 
 " Fix some common and easy mistakes when typing commands:
 cnoreabbrev W w
