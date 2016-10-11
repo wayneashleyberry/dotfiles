@@ -113,11 +113,6 @@ map <leader>w :vsp<cr>
 " Fuzzy file finder
 if (has('gui_macvim'))
     let g:ctrlp_working_path_mode = 0
-    if executable('/usr/local/bin/ag')
-        set grepprg=/usr/local/bin/ag\ --nogroup\ --nocolor
-        let g:ctrlp_user_command = '/usr/local/bin/ag %s -l --nocolor -g ""'
-        let g:ctrlp_use_caching = 0
-    endif
 else
     map <C-b> :Buffers<CR>
     map <C-p> :Files<CR>
