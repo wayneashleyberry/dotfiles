@@ -96,3 +96,5 @@ bindkey -v
 # Greeting Message
 echo ""
 $GOPATH/bin/dailyverse -pad
+
+export PATH="$HOME/.yarn/bin:$PATH"
