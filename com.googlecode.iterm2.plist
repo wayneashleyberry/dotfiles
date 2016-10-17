@@ -1772,6 +1772,8 @@
 			<string></string>
 		</dict>
 	</dict>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -1801,7 +1803,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1817,19 +1819,23 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>882 948 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1535 970 400 129 0 0 2560 1417 </string>
+	<string>612 800 400 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>930 610 700 605 0 0 2560 1417 </string>
+	<string>1282 537 700 605 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>441 866 796 473 0 0 2560 1417 </string>
+	<string>551 690 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>247 801 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>41 251 1002 1127 0 0 2560 1417 </string>
+	<string>115 348 938 928 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>305 466 970 555 0 0 2560 1417 </string>
+	<string>341 165 970 555 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>846 389 970 555 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>385 114 970 576 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>789 303 970 555 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_087C4C51-53D8-41F8-8612-426E255EB1E4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_087C4C51-53D8-41F8-8612-426E255EB1E4_selection</key>
@@ -2560,7 +2566,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-29T08:14:18Z</date>
+	<date>2016-10-17T04:30:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
@@ -2574,6 +2580,6 @@
 	<key>UseBorder</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.9</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
