@@ -82,8 +82,7 @@ set termguicolors " Enable true color support
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
-set wildignore+=*/bower_components/*,*/node_modules/*
-set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
+set wildignore+=*/smarty/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
 set wildignorecase " Ignore case when completing filenames and directories
 set list listchars=tab:\|\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
 
@@ -112,6 +111,7 @@ map <leader>w :vsp<cr>
 " Fuzzy file finder
 if (has('gui_macvim'))
     let g:ctrlp_working_path_mode = 0
+    let g:ctrlp_custom_ignore = 'node_modules\|vendor'
 else
     map <C-b> :Buffers<CR>
     map <C-p> :Files<CR>
