@@ -61,7 +61,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # Node Modules
 alias gh='git open' # https://github.com/paulirish/git-open
-alias rm='trash' # https://github.com/sindresorhus/trash-cli
 
 # Google Play
 play() {
