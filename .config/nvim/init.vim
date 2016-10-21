@@ -59,6 +59,7 @@ set formatoptions+=2 " Use indent from 2nd line of a paragraph
 set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 set gdefault " By default add g flag to search/replace. Add g to toggle
+set hlsearch " Highlight all search results
 set hidden " When a buffer is brought to foreground, remember undo history and marks
 set ignorecase " Ignore case of searches
 set noerrorbells " Disable error bells
@@ -112,6 +113,7 @@ map <leader>w :vsp<cr>
 if (has('gui_macvim'))
     let g:ctrlp_working_path_mode = 0
     let g:ctrlp_custom_ignore = 'node_modules\|vendor'
+    let g:ctrlp_clear_cache_on_exit = 1
 else
     map <C-b> :Buffers<CR>
     map <C-p> :Files<CR>
@@ -172,7 +174,6 @@ endif
 
 " Neomake
 autocmd! FocusLost,BufReadPost,BufWritePost * Neomake
-" let g:neomake_verbose = 3
-" let g:neomake_open_list = 2
+let g:neomake_go_enabled_makers = []
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_javascript_enabled_makers = ['eslint']

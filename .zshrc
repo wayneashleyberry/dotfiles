@@ -94,7 +94,3 @@ autoload -U compinit && compinit
 
 # Bitch, please.
 bindkey -v
-
-# Greeting Message
-echo ""
-$GOPATH/bin/dailyverse -pad
