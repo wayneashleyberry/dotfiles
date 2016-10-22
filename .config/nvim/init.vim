@@ -14,6 +14,7 @@
 "              '=='
 "
 call plug#begin('~/.config/nvim/plugged')
+Plug 'tpope/vim-vinegar'
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
