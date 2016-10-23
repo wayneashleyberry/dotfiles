@@ -368,7 +368,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://play.google.com/music/listen?u=0#/sr/{query}</string>
+				<string>https://play.google.com/music/listen?authuser=wayneashleyberry@gmail.com#/sr/{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
