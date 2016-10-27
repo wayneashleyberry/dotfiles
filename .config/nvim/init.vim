@@ -163,3 +163,6 @@ autocmd! FocusLost,BufReadPost,BufWritePost * Neomake
 let g:neomake_go_enabled_makers = []
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_javascript_enabled_makers = ['eslint']
+
+" Polyglot
+let g:polyglot_disabled = ['go']
