@@ -1,18 +1,3 @@
-"                                                ,  ,
-"                                               / \/ \
-"                                              (/ //_ \_
-"     .-._                                      \||  .  \
-"      \  '-._                            _,:__.-"/---\_ \
-" ______/___  '.    .--------------------'~-'--.)__( , )\ \
-"`'--.___  _\  /    |                         ,'    \)|\ `\|
-"     /_.-' _\ \ _:,_        HERE BE DRAGONS!       " ||   (
-"   .'__ _.' \'-/,`-~`       ----------------         |/
-"       '. ___.> /=,|                                 |
-"        / .-'/_ )  '---------------------------------'
-"        )'  ( /(/
-"             \\ "
-"              '=='
-"
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
 Plug 'editorconfig/editorconfig-vim', { 'for': ['php', 'javascript']}
@@ -37,10 +22,10 @@ let mapleader = '\'
 
 color molotov
 
+" Although neovim has a good defaults for persistent undo, vim and macvim do
+" not… so for consistency we'll set it explicitly here.
 if has('persistent_undo')
   set undofile
-  " Although neovim has a good default for undodir, vim and macvim do not… so for
-  " consistency we'll set it explicitly here:
   set undodir=$HOME/.config/nvim/undo//
 endif
 
