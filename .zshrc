@@ -40,7 +40,8 @@ export CARGOPATH=$HOME/.cargo
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin:$HOME/.composer/vendor/bin
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+alias vi="nvim"
+export EDITOR='nvim'
 
 # Browsing
 alias l="tree --dirsfirst -aFCNL 1"
