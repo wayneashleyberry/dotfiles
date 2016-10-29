@@ -8,13 +8,13 @@ Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-sensible'
 Plug 'neomake/neomake'
-if (has('gui_macvim'))
-    Plug 'ctrlpvim/ctrlp.vim'
-else
+if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
+else
+    Plug 'tpope/vim-sensible'
+    Plug 'ctrlpvim/ctrlp.vim'
 endif
 call plug#end()
 
@@ -96,7 +96,7 @@ map <Tab> %
 map <leader>w :vsp<cr>
 
 " Fuzzy file finder
-if (has('gui_macvim'))
+if (!has('nvim'))
     let g:ctrlp_working_path_mode = 0
     let g:ctrlp_custom_ignore = 'node_modules\|vendor'
     let g:ctrlp_clear_cache_on_exit = 1
