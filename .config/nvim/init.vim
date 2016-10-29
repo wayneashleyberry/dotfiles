@@ -24,7 +24,7 @@ color molotov
 
 " Although neovim has a good defaults for persistent undo, vim and macvim do
 " not… so for consistency we'll set it explicitly here.
-if has('persistent_undo')
+if !has('nvim')
   set undofile
   set undodir=$HOME/.config/nvim/undo//
 endif
