@@ -95,14 +95,14 @@ map <Tab> %
 " Open a split window and switch to it
 map <leader>w :vsp<cr>
 
-" Fuzzy file finder
-if (!has('nvim'))
-    let g:ctrlp_working_path_mode = 0
-    let g:ctrlp_custom_ignore = 'node_modules\|vendor'
-    let g:ctrlp_clear_cache_on_exit = 1
-else
+" Neovim gets FZF, Vim gets CtrlP
+if (has('nvim'))
     map <C-b> :Buffers<CR>
     map <C-p> :Files<CR>
+else
+    let g:ctrlp_working_path_mode = 0
+    let g:ctrlp_clear_cache_on_exit = 1
+    let g:ctrlp_custom_ignore = 'node_modules\|vendor'
 endif
 
 " Edit and source config files
