@@ -116,6 +116,9 @@ au BufLeave * :silent! wa!
 " Snippets
 nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>/><<CR>:set nohlsearch<CR>a
 
+" todo.md
+nnoremap <leader>et :e ~/Dropbox/todo.md<CR>
+
 " TextMate style formatting
 nnoremap Q gqip
 vnoremap Q gq
