@@ -1,3 +1,5 @@
 .netrwhist
 plugged/*
 !plugged/.gitkeep
+undo/*
+!undo/.gitkeep

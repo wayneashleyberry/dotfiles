@@ -40,7 +40,8 @@ export CARGOPATH=$HOME/.cargo
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin:$HOME/.composer/vendor/bin
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+alias vi="nvim"
+export EDITOR='nvim'
 
 # Browsing
 alias l="tree --dirsfirst -aFCNL 1"
@@ -56,9 +57,11 @@ alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
 
+# Yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # Node Modules
 alias gh='git open' # https://github.com/paulirish/git-open
-alias rm='trash' # https://github.com/sindresorhus/trash-cli
 
 # Google Play
 play() {
@@ -74,6 +77,15 @@ fd() {
   local dir
   dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
   cd "$dir"
+}
+
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
 # Pure
@@ -92,7 +104,3 @@ autoload -U compinit && compinit
 
 # Bitch, please.
 bindkey -v
-
-# Greeting Message
-echo ""
-$GOPATH/bin/dailyverse -pad
