@@ -171,6 +171,7 @@ let g:neomake_go_enabled_makers = []
 let g:neomake_html_enabled_makers = []
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
 
 " Polyglot
 let g:polyglot_disabled = ['go']
