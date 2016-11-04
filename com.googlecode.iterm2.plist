@@ -2231,7 +2231,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>087C4C51-53D8-41F8-8612-426E255EB1E4</string>
 	<key>DimBackgroundWindows</key>
-	<false/>
+	<true/>
 	<key>DimOnlyText</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
@@ -2332,9 +2332,11 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Desktop</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{1247, 704}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 521}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -2366,23 +2368,27 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>901 85 445 77 0 0 1440 878 </string>
+	<string>1161 691 563 77 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 420 606 456 0 0 1440 877 </string>
+	<string>882 948 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>520 562 400 129 0 0 1440 878 </string>
+	<string>612 800 400 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 364 620 392 0 0 1440 877 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 126 606 469 0 0 1440 877 </string>
+	<string>1282 537 700 605 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>349 359 796 473 0 0 1440 878 </string>
+	<string>551 904 796 473 0 0 2560 1440 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>247 801 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>157 262 970 555 0 0 1440 878 </string>
+	<string>123 371 987 741 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>350 214 970 555 0 0 1440 878 </string>
+	<string>341 165 970 555 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>197 52 970 555 0 0 1440 900 </string>
+	<string>846 389 970 555 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>385 114 970 576 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>789 303 970 555 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_087C4C51-53D8-41F8-8612-426E255EB1E4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_087C4C51-53D8-41F8-8612-426E255EB1E4_selection</key>
@@ -3032,6 +3038,8 @@
 			<string>/Users/Wayne</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -3039,26 +3047,31 @@
 	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>F35C2F9C-4392-40CF-B13E-D4D6B0155883</string>
+	<string>D5243E2E-F1B1-4BCD-9A86-21098A00A629</string>
 	<key>NoSyncLastTipTime</key>
-	<real>488450025.149975</real>
+	<real>457531326.000175</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchForIncompatibilityWarnings</key>
-	<real>485096861.83630902</real>
+	<real>485166775.84157801</real>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>477681332.677544</real>
+	<real>464595963.24439597</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -3098,26 +3111,28 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=26</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=75</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-10-28T13:29:11Z</date>
+	<date>2016-11-04T07:27:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.59999999999999998</real>
+	<real>0.4877078325320513</real>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1474879360</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160808-nightly</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
