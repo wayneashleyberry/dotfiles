@@ -9,6 +9,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'neomake/neomake'
+" Plug 'airblade/vim-gitgutter'
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
@@ -110,8 +111,11 @@ command! Config :e $MYVIMRC
 command! SourceConfig :source $MYVIMRC
 
 " Save files when losing focus, essentially autosave.
-au FocusLost * :silent! wa!
-au BufLeave * :silent! wa!
+augroup autosave
+    au!
+    au FocusLost * :silent! wa!
+    au BufLeave * :silent! wa!
+augroup END
 
 " Snippets
 nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>/><<CR>:set nohlsearch<CR>a
@@ -170,3 +174,6 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 
 " Polyglot
 let g:polyglot_disabled = ['go']
+
+" airblade/vim-gitgutter
+let g:gitgutter_sign_column_always = 1
