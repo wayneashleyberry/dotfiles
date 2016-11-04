@@ -116,6 +116,9 @@ au BufLeave * :silent! wa!
 " Snippets
 nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>/><<CR>:set nohlsearch<CR>a
 
+" todo.md
+nnoremap <leader>et :e ~/Dropbox/todo.md<CR>
+
 " TextMate style formatting
 nnoremap Q gqip
 vnoremap Q gq
@@ -161,6 +164,7 @@ endif
 " Neomake
 autocmd! FocusLost,BufReadPost,BufWritePost * Neomake
 let g:neomake_go_enabled_makers = []
+let g:neomake_html_enabled_makers = []
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_javascript_enabled_makers = ['eslint']
 
