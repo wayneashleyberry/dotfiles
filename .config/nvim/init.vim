@@ -9,6 +9,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'neomake/neomake'
+Plug 'kassio/neoterm'
 " Plug 'airblade/vim-gitgutter'
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -173,8 +174,11 @@ let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
 
-" Polyglot
+" vim-polyglot
 let g:polyglot_disabled = ['go']
 
-" airblade/vim-gitgutter
+" vim-gitgutter
 let g:gitgutter_sign_column_always = 1
+
+" neoterm
+let g:neoterm_position = 'horizontal'
