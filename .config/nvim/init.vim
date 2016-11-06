@@ -90,8 +90,6 @@ noremap gk k
 " Clear search highlighting using the <space> key
 nnoremap <leader><space> :noh<cr>
 
-map <Leader>ru :split<CR> :terminal ruby %<CR>
-
 " Use <Tab> for bracket matching
 map <Tab> %
 
@@ -175,8 +173,8 @@ let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
 
-" vim-polyglot
+" Polyglot
 let g:polyglot_disabled = ['go']
 
-" vim-gitgutter
+" airblade/vim-gitgutter
 let g:gitgutter_sign_column_always = 1
