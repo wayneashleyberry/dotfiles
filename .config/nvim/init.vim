@@ -1,15 +1,15 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-vinegar'
+" Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
+Plug 'neomake/neomake'
 Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
-Plug 'neomake/neomake'
-" Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-vinegar'
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
