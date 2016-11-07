@@ -123,6 +123,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DF9A5A9F-5FA9-4485-A411-C4530C8175A8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7DF82A8A-0D40-4597-B75E-F8AC4FA57274</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E95BDEF9-5267-41C9-AC69-FD8B4F299654</key>
 		<array>
 			<dict>
@@ -160,6 +173,46 @@
 	<string>Google Apps</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>mail</string>
+				<key>subtext</key>
+				<string>wayne.berry@getsmarter.co.za</string>
+				<key>text</key>
+				<string>Google Mail</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>DF9A5A9F-5FA9-4485-A411-C4530C8175A8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string>com.google.chrome</string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://mail.google.com/mail/u/?authuser=wayne.berry@getsmarter.co.za</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>7DF82A8A-0D40-4597-B75E-F8AC4FA57274</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -654,6 +707,13 @@
 			<key>ypos</key>
 			<integer>590</integer>
 		</dict>
+		<key>7DF82A8A-0D40-4597-B75E-F8AC4FA57274</key>
+		<dict>
+			<key>xpos</key>
+			<integer>980</integer>
+			<key>ypos</key>
+			<integer>60</integer>
+		</dict>
 		<key>8692A7A7-83B7-4621-ABFA-ECCB213D038C</key>
 		<dict>
 			<key>xpos</key>
@@ -730,6 +790,13 @@
 			<integer>770</integer>
 			<key>ypos</key>
 			<integer>530</integer>
+		</dict>
+		<key>DF9A5A9F-5FA9-4485-A411-C4530C8175A8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>60</integer>
 		</dict>
 		<key>E63F4AC2-BCE3-476B-8D43-688D354001FF</key>
 		<dict>
