@@ -27,7 +27,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Wunderlist</string>
+	<string>Asana</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -36,11 +36,11 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>wl</string>
+				<string>asa</string>
 				<key>subtext</key>
-				<string>https://www.wunderlist.com/#/lists/inbox</string>
+				<string>https://app.asana.com</string>
 				<key>text</key>
-				<string>Wunderlist</string>
+				<string>Asana</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -59,7 +59,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://www.wunderlist.com/#/lists/inbox</string>
+				<string>https://app.asana.com</string>
 				<key>utf8</key>
 				<true/>
 			</dict>

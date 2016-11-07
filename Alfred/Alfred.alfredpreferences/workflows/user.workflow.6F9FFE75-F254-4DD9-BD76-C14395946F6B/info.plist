@@ -70,7 +70,7 @@
 				<key>keyword</key>
 				<string>slack</string>
 				<key>subtext</key>
-				<string>https://wearenext.slack.com/messages/general/</string>
+				<string>Next</string>
 				<key>text</key>
 				<string>Slack</string>
 				<key>withspace</key>
@@ -91,7 +91,7 @@
 				<key>keyword</key>
 				<string>slack</string>
 				<key>subtext</key>
-				<string>https://getsmarter.slack.com/messages/general/</string>
+				<string>GetSmarter</string>
 				<key>text</key>
 				<string>Slack</string>
 				<key>withspace</key>
