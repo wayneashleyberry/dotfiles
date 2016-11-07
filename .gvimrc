@@ -8,3 +8,4 @@ set guioptions-=R
 set guioptions+=e
 noremap <C-Tab> :tabnext<CR>
 noremap <C-S-Tab> :tabprev<CR>
+noremap <leader>f :set invfu<CR>
