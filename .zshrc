@@ -33,11 +33,8 @@ setopt share_history # share command history data
 # Go
 export GOPATH=$HOME
 
-# Rust
-export CARGOPATH=$HOME/.cargo
-
 # PATH (Homebrew, Go, Rust, Composer etc)
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$CARGOPATH/bin:$HOME/.composer/vendor/bin
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 
 # Preferred editor for local and remote sessions
 alias vi="nvim"
@@ -104,5 +101,3 @@ autoload -U compinit && compinit
 
 # Bitch, please.
 bindkey -v
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
