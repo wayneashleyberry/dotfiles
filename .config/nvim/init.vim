@@ -148,10 +148,8 @@ noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
 
 " Yank to system clipboard
-if !has('gui_running')
-    nnoremap y "*y
-    vnoremap y "*y
-endif
+nnoremap y "*y
+vnoremap y "*y
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
