@@ -101,3 +101,5 @@ autoload -U compinit && compinit
 
 # Bitch, please.
 bindkey -v
+
+eval "$(rbenv init -)"
