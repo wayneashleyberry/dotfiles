@@ -1,5 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
@@ -10,6 +10,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-vinegar'
+Plug 'morhetz/gruvbox'
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
@@ -21,7 +22,8 @@ call plug#end()
 
 let mapleader = '\'
 
-color molotov
+set background=dark
+color gruvbox
 
 " Although neovim has a good defaults for persistent undo, vim and macvim do
 " not… so for consistency we'll set it explicitly here.
