@@ -104,7 +104,7 @@ antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
 
 # Hipster prompt symbols
-PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
+# PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
 
 # This makes things work...
 autoload -U compinit && compinit
@@ -113,3 +113,6 @@ autoload -U compinit && compinit
 bindkey -v
 
 eval "$(rbenv init -)"
+
+# echo ''
+# dailyverse
