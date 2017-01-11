@@ -12,6 +12,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-vinegar'
 " Colors
 Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'tomasr/molokai'
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -26,6 +27,9 @@ let mapleader = '\'
 
 set background=dark
 color gruvbox
+
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 " Although neovim has a good defaults for persistent undo, vim and macvim do
 " not… so for consistency we'll set it explicitly here.
