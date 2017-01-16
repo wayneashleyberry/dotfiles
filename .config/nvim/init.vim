@@ -14,6 +14,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'tomasr/molokai'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
