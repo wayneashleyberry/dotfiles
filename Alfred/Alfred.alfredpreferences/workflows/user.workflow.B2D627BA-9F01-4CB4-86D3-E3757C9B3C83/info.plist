@@ -142,7 +142,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/usr/local/Cellar/macvim/8.0-120/MacVim.app</string>
+					<string>/usr/local/Cellar/macvim/8.0-121/MacVim.app</string>
 				</array>
 				<key>toggle</key>
 				<false/>
@@ -151,23 +151,6 @@
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
 			<string>819B7B1D-0814-4C19-86A9-50B98DB1DF52</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/Google Chrome.app</string>
-				</array>
-				<key>toggle</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
-			<key>uid</key>
-			<string>D5421059-6E74-469E-8951-3DA1B78CA3E4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -201,6 +184,23 @@
 			<string>36A07ABE-96B3-4C07-B309-D3EE36975016</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Google Chrome.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>D5421059-6E74-469E-8951-3DA1B78CA3E4</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
