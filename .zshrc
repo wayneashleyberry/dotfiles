@@ -114,4 +114,4 @@ bindkey -v
 
 eval "$(rbenv init -)"
 
-dailyverse
+#dailyverse
