@@ -27,6 +27,7 @@ call plug#end()
 let mapleader = '\'
 
 set background=dark
+let g:gruvbox_invert_selection = 0
 color gruvbox
 
 let g:lightline = {}
