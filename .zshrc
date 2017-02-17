@@ -110,6 +110,6 @@ PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
 autoload -U compinit && compinit
 
 # Bitch, please.
-bindkey -v
+# bindkey -v
 
 #dailyverse
