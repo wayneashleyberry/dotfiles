@@ -103,13 +103,8 @@ antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
 
-# Hipster prompt symbols
-# PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
-
 # This makes things work...
 autoload -U compinit && compinit
 
-# Bitch, please.
-# bindkey -v
-
-#dailyverse
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
