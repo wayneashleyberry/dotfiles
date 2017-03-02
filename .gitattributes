@@ -1,1 +1,2 @@
 *.png diff=exif
+CHANGELOG.md merge=union
