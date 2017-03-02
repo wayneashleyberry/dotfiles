@@ -7,7 +7,7 @@
 		<key>key</key>
 		<integer>36</integer>
 		<key>mod</key>
-		<integer>1966080</integer>
+		<integer>1572864</integer>
 		<key>string</key>
 		<string>↩</string>
 	</dict>
@@ -16,6 +16,8 @@
 	<key>indexUntickedTracks</key>
 	<false/>
 	<key>keywordEnabled</key>
+	<false/>
+	<key>usePlaylist</key>
 	<false/>
 </dict>
 </plist>
