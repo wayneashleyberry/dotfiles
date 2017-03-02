@@ -32,19 +32,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8692A7A7-83B7-4621-ABFA-ECCB213D038C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C347680D-2F1F-4A26-B2A6-1200B12F62A8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>93F1F4B3-8833-4231-B2ED-1161D40E3A97</key>
 		<array>
 			<dict>
@@ -110,32 +97,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>DC274A26-9214-4231-9A01-D2CECDD40433</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>FE80B786-091B-4ABD-B4B6-AA6FA7A49517</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>DF9A5A9F-5FA9-4485-A411-C4530C8175A8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7DF82A8A-0D40-4597-B75E-F8AC4FA57274</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E95BDEF9-5267-41C9-AC69-FD8B4F299654</key>
 		<array>
 			<dict>
@@ -173,46 +134,6 @@
 	<string>Google Apps</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>mail</string>
-				<key>subtext</key>
-				<string>wayne.berry@getsmarter.co.za</string>
-				<key>text</key>
-				<string>Google Mail</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>DF9A5A9F-5FA9-4485-A411-C4530C8175A8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string>com.google.chrome</string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://mail.google.com/mail/u/?authuser=wayne.berry@getsmarter.co.za</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>7DF82A8A-0D40-4597-B75E-F8AC4FA57274</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -336,46 +257,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>mail</string>
-				<key>subtext</key>
-				<string>wayne@wearenext.co.za</string>
-				<key>text</key>
-				<string>Google Mail</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8692A7A7-83B7-4621-ABFA-ECCB213D038C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string>com.google.chrome</string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://mail.google.com/a/wearenext.co.za</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>C347680D-2F1F-4A26-B2A6-1200B12F62A8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string>com.google.chrome</string>
 				<key>spaces</key>
@@ -410,46 +291,6 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>93F1F4B3-8833-4231-B2ED-1161D40E3A97</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string>com.google.chrome</string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://play.google.com/music/listen?authuser=wayneashleyberry@gmail.com#/sr/{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>FE80B786-091B-4ABD-B4B6-AA6FA7A49517</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>play</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Google Play Music</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>DC274A26-9214-4231-9A01-D2CECDD40433</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -707,20 +548,6 @@
 			<key>ypos</key>
 			<integer>590</integer>
 		</dict>
-		<key>7DF82A8A-0D40-4597-B75E-F8AC4FA57274</key>
-		<dict>
-			<key>xpos</key>
-			<integer>980</integer>
-			<key>ypos</key>
-			<integer>60</integer>
-		</dict>
-		<key>8692A7A7-83B7-4621-ABFA-ECCB213D038C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>780</integer>
-			<key>ypos</key>
-			<integer>300</integer>
-		</dict>
 		<key>8B8F95DE-768C-4097-BE3D-1CFC00677D8D</key>
 		<dict>
 			<key>xpos</key>
@@ -770,33 +597,12 @@
 			<key>ypos</key>
 			<integer>590</integer>
 		</dict>
-		<key>C347680D-2F1F-4A26-B2A6-1200B12F62A8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>980</integer>
-			<key>ypos</key>
-			<integer>300</integer>
-		</dict>
 		<key>CCF94A6C-78F4-48FB-BC21-ACD16276544F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
 			<integer>850</integer>
-		</dict>
-		<key>DC274A26-9214-4231-9A01-D2CECDD40433</key>
-		<dict>
-			<key>xpos</key>
-			<integer>770</integer>
-			<key>ypos</key>
-			<integer>530</integer>
-		</dict>
-		<key>DF9A5A9F-5FA9-4485-A411-C4530C8175A8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>780</integer>
-			<key>ypos</key>
-			<integer>60</integer>
 		</dict>
 		<key>E63F4AC2-BCE3-476B-8D43-688D354001FF</key>
 		<dict>
@@ -818,13 +624,6 @@
 			<integer>300</integer>
 			<key>ypos</key>
 			<integer>980</integer>
-		</dict>
-		<key>FE80B786-091B-4ABD-B4B6-AA6FA7A49517</key>
-		<dict>
-			<key>xpos</key>
-			<integer>960</integer>
-			<key>ypos</key>
-			<integer>530</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

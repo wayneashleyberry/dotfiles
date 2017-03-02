@@ -113,6 +113,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://over.slack.com</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A3526AC1-AAAB-411D-B1F0-2238865A5807</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -128,25 +147,6 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>FD38CCB2-9765-4185-BEEB-6B4039D03082</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://over.slack.com</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>A3526AC1-AAAB-411D-B1F0-2238865A5807</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -273,27 +273,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>o github</string>
-				<key>subtext</key>
-				<string>We use GitHub for source code hosting.</string>
-				<key>text</key>
-				<string>GitHub</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>05661C83-B1FD-4EC8-9856-7A66A1903D1B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -318,7 +297,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://github.com/overhq</string>
+				<string>https://github.com/overhq?utf8=%E2%9C%93&amp;q={query}&amp;type=&amp;language=</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -347,6 +326,27 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>0242E641-5442-4A42-B2FE-8F6B47B73ED5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>o github</string>
+				<key>subtext</key>
+				<string>We use GitHub for source code hosting.</string>
+				<key>text</key>
+				<string>GitHub</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>05661C83-B1FD-4EC8-9856-7A66A1903D1B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -461,7 +461,7 @@
 		<key>AB7AE2F5-7CFC-43CE-9A43-27054CD19DEF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>120</integer>
+			<integer>490</integer>
 			<key>ypos</key>
 			<integer>450</integer>
 		</dict>
@@ -475,7 +475,7 @@
 		<key>CE1A17A2-EB8B-4990-9651-73B3D9BCA670</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
+			<integer>690</integer>
 			<key>ypos</key>
 			<integer>450</integer>
 		</dict>
