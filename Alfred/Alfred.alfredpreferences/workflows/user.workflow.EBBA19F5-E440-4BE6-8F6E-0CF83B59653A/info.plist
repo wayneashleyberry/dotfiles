@@ -25,7 +25,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>07D2DAA6-46BE-4135-A2B3-73ED55966142</string>
+				<string>5646DC88-9AB6-41F3-88DC-9BBE704AB145</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EEDDF055-7496-407A-91C6-C43F04B1D8FC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -52,6 +62,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>86250145-E576-4DF0-B4C4-168A17DB8984</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5646DC88-9AB6-41F3-88DC-9BBE704AB145</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>150447A4-6215-4F1B-9415-DC816C0D9D98</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -99,6 +122,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EEDDF055-7496-407A-91C6-C43F04B1D8FC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0408CCA8-1E0C-41F0-B254-3ABE24490BE7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FD38CCB2-9765-4185-BEEB-6B4039D03082</key>
 		<array>
 			<dict>
@@ -126,21 +162,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>o slack</string>
-				<key>subtext</key>
-				<string>We use Slack as our primary communications platform.</string>
-				<key>text</key>
-				<string>Slack</string>
-				<key>withspace</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://app.tettra.co/teams/over</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>FD38CCB2-9765-4185-BEEB-6B4039D03082</string>
+			<string>150447A4-6215-4F1B-9415-DC816C0D9D98</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -169,13 +203,34 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
+				<string>o slack</string>
+				<key>subtext</key>
+				<string>We use Slack as our primary communications platform.</string>
+				<key>text</key>
+				<string>Slack</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FD38CCB2-9765-4185-BEEB-6B4039D03082</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
 				<string>o tettra</string>
 				<key>subtext</key>
 				<string>We use Tettra to store important documents about how we work.</string>
 				<key>text</key>
 				<string>Tettra</string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
@@ -187,19 +242,57 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>5646DC88-9AB6-41F3-88DC-9BBE704AB145</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>EEDDF055-7496-407A-91C6-C43F04B1D8FC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://app.tettra.co/teams/over</string>
+				<string>https://app.tettra.co/teams/over/pages?q={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>07D2DAA6-46BE-4135-A2B3-73ED55966142</string>
+			<string>0408CCA8-1E0C-41F0-B254-3ABE24490BE7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -286,27 +379,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>o github</string>
-				<key>subtext</key>
-				<string>We use GitHub for source code hosting.</string>
-				<key>text</key>
-				<string>GitHub</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>05661C83-B1FD-4EC8-9856-7A66A1903D1B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -360,6 +432,27 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>0242E641-5442-4A42-B2FE-8F6B47B73ED5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>o github</string>
+				<key>subtext</key>
+				<string>We use GitHub for source code hosting.</string>
+				<key>text</key>
+				<string>GitHub</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>05661C83-B1FD-4EC8-9856-7A66A1903D1B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -462,6 +555,13 @@
 			<key>ypos</key>
 			<integer>30</integer>
 		</dict>
+		<key>0408CCA8-1E0C-41F0-B254-3ABE24490BE7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>850</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
 		<key>05661C83-B1FD-4EC8-9856-7A66A1903D1B</key>
 		<dict>
 			<key>xpos</key>
@@ -469,12 +569,12 @@
 			<key>ypos</key>
 			<integer>330</integer>
 		</dict>
-		<key>07D2DAA6-46BE-4135-A2B3-73ED55966142</key>
+		<key>150447A4-6215-4F1B-9415-DC816C0D9D98</key>
 		<dict>
 			<key>xpos</key>
-			<integer>670</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>30</integer>
+			<integer>10</integer>
 		</dict>
 		<key>441F1570-4BEC-4933-9472-4C92E2FE1146</key>
 		<dict>
@@ -489,6 +589,13 @@
 			<integer>480</integer>
 			<key>ypos</key>
 			<integer>180</integer>
+		</dict>
+		<key>5646DC88-9AB6-41F3-88DC-9BBE704AB145</key>
+		<dict>
+			<key>xpos</key>
+			<integer>690</integer>
+			<key>ypos</key>
+			<integer>50</integer>
 		</dict>
 		<key>5DFEF8B6-B9AB-4AC7-B5C5-3634A017A252</key>
 		<dict>
@@ -552,6 +659,13 @@
 			<integer>120</integer>
 			<key>ypos</key>
 			<integer>180</integer>
+		</dict>
+		<key>EEDDF055-7496-407A-91C6-C43F04B1D8FC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>690</integer>
+			<key>ypos</key>
+			<integer>100</integer>
 		</dict>
 		<key>FD38CCB2-9765-4185-BEEB-6B4039D03082</key>
 		<dict>
