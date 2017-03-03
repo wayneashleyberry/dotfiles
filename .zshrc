@@ -31,7 +31,7 @@ setopt inc_append_history
 setopt share_history # share command history data
 
 # Go
-export GOPATH=$HOME
+export GOPATH=$HOME/go
 
 # PATH (Homebrew, Go, Rust, Composer etc)
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin

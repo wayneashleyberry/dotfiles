@@ -257,25 +257,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string>com.google.chrome</string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://www.google.com/calendar/render?authuser=wayneashleyberry@gmail.com</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>8B8F95DE-768C-4097-BE3D-1CFC00677D8D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -302,14 +283,14 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://drive.google.com/a/wearenext.co.za/</string>
+				<string>https://www.google.com/calendar/render?authuser=wayneashleyberry@gmail.com</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>64CA95ED-0FA1-401A-89FB-49A9CC7CEDCF</string>
+			<string>8B8F95DE-768C-4097-BE3D-1CFC00677D8D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -337,21 +318,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>analytics</string>
-				<key>subtext</key>
-				<string>Open Google Analytics in Chrome</string>
-				<key>text</key>
-				<string>Google Analytics</string>
-				<key>withspace</key>
-				<false/>
+				<key>browser</key>
+				<string>com.google.chrome</string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://drive.google.com/a/wearenext.co.za/</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>AE69A8F7-AD63-4C27-B821-44E5DD918DB7</string>
+			<string>64CA95ED-0FA1-401A-89FB-49A9CC7CEDCF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -371,6 +350,27 @@
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>9127A8F8-745B-4B5B-8E1F-7E5324D53757</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>analytics</string>
+				<key>subtext</key>
+				<string>Open Google Analytics in Chrome</string>
+				<key>text</key>
+				<string>Google Analytics</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>AE69A8F7-AD63-4C27-B821-44E5DD918DB7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -483,7 +483,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://photos.google.com</string>
+				<string>https://photos.google.com/u/?authuser=wayneashleyberry@gmail.com</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
