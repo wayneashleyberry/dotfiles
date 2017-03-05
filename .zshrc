@@ -60,6 +60,9 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Node Modules
 alias gh='git open' # https://github.com/paulirish/git-open
 
+# Youtube DL
+alias yydl="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--prompt="△ "'
