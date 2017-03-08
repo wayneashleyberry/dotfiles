@@ -4,6 +4,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
+" Plug 'dodie/vim-disapprove-deep-indentation'
 " Plug 'neomake/neomake'
 Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
