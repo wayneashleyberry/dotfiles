@@ -10,11 +10,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-vinegar'
+
 " Colors
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
-" Plug 'tomasr/molokai'
-" Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'tomasr/molokai'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'mhartington/oceanic-next'
+
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
