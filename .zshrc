@@ -54,6 +54,11 @@ alias br='git checkout -b'
 alias gs='git status -sb'
 alias gca='git commit -am'
 
+# Compile and run a java file
+jr() {
+	javac $1.java && java $1
+}
+
 # Yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
