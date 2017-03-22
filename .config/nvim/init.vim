@@ -69,7 +69,7 @@ set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join
 set noshowmode " Don't show the current mode (lightline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
 set nowrap " Don't wrap text
-" set number relativenumber " Line numbers
+set number relativenumber " Line numbers
 set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
 set report=0 " Show all changes
 set scrolloff=3 " Start scrolling three lines before horizontal border of window

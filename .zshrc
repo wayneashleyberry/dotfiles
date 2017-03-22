@@ -60,8 +60,16 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Node Modules
 alias gh='git open' # https://github.com/paulirish/git-open
 
+# Google Cloud Functions
+# ----------------------
+# Unfortunately zsh ships with a built in `functions` function, so to be able to
+# use the npm module it must be aliased to something else.
+# https://github.com/GoogleCloudPlatform/cloud-functions-emulator
+alias fn='/usr/local/bin/functions'
+
 # Youtube DL
 alias yydl="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
+alias ydl="youtube-dl -o '%(uploader)s/%(playlist)s/%(title)s.%(ext)s'"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -70,7 +78,7 @@ export FZF_DEFAULT_OPTS='--prompt="△ "'
 # fd is like cd, but fuzzy
 fd() {
   local dir
-  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
+  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 4 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
   cd "$dir"
 }
 
