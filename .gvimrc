@@ -1,4 +1,4 @@
-set guifont=Meslo\ LG\ L\ DZ:h14
+set guifont=Meslo\ LG\ L\ DZ:h13
 set guioptions-=m
 set guioptions-=T
 set guioptions-=l
