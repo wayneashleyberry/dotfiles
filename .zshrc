@@ -119,8 +119,11 @@ antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
 
+eval "$(rbenv init -)"
+
 # This makes things work...
 autoload -U compinit && compinit
 
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
