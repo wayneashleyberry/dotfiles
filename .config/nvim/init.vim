@@ -4,6 +4,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
+" Plug 'w0rp/ale'
 " Plug 'dodie/vim-disapprove-deep-indentation'
 " Plug 'neomake/neomake'
 Plug 'roman/golden-ratio'
@@ -185,6 +186,7 @@ endif
 " let g:neomake_php_enabled_makers = ['php', 'phpcs']
 " let g:neomake_javascript_enabled_makers = ['eslint']
 " let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
+let g:neomake_java_javac_args = ['-cp', '.']
 
 " vim-polyglot
 let g:polyglot_disabled = ['go']
