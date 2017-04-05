@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
@@ -16,9 +17,9 @@ Plug 'tpope/vim-vinegar'
 " Colors
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
-" Plug 'tomasr/molokai'
-" Plug 'frankier/neovim-colors-solarized-truecolor-only'
-" Plug 'mhartington/oceanic-next'
+Plug 'tomasr/molokai'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'mhartington/oceanic-next'
 
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -192,4 +193,4 @@ let g:neomake_java_javac_args = ['-cp', '.']
 let g:polyglot_disabled = ['go']
 
 " vim-gitgutter
-let g:gitgutter_sign_column_always = 1
+" let g:gitgutter_sign_column_always = 1
