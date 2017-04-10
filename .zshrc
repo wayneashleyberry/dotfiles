@@ -127,3 +127,8 @@ autoload -U compinit && compinit
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
+# JAVA :/
+
+# export CLASS_PATH=$HOME/.ivy2/cache
+# CLASS_PATH=$CLASS_PATH:$HOME/src/github.com/overhq/over-core-api
+# CLASS_PATH=$CLASS_PATH:$HOME/src/github.com/overhq/over-circles-api

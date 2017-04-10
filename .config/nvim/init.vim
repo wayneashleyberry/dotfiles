@@ -5,6 +5,12 @@ Plug 'junegunn/vim-easy-align'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
+
+" Tags
+" Plug 'xolox/vim-misc'
+" Plug 'xolox/vim-easytags'
+" Plug 'majutsushi/tagbar'
+
 " Plug 'w0rp/ale'
 " Plug 'dodie/vim-disapprove-deep-indentation'
 " Plug 'neomake/neomake'
@@ -17,9 +23,6 @@ Plug 'tpope/vim-vinegar'
 " Colors
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'tomasr/molokai'
-Plug 'frankier/neovim-colors-solarized-truecolor-only'
-Plug 'mhartington/oceanic-next'
 
 if (has('nvim'))
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -34,6 +37,7 @@ let mapleader = '\'
 
 set background=dark
 let g:gruvbox_invert_selection = 0
+let g:gruvbox_contrast_dark = 'hard'
 color gruvbox
 
 let g:lightline = {}
@@ -120,7 +124,7 @@ if (has('nvim'))
 else
     let g:ctrlp_working_path_mode = 0
     let g:ctrlp_clear_cache_on_exit = 1
-    let g:ctrlp_custom_ignore = 'node_modules\|vendor'
+    let g:ctrlp_custom_ignore = 'node_modules\|vendor\|target'
 endif
 
 " Edit and source config files
@@ -194,3 +198,6 @@ let g:polyglot_disabled = ['go']
 
 " vim-gitgutter
 " let g:gitgutter_sign_column_always = 1
+
+" Tags
+" set tags=./tags,tags,$HOME,$HOME/.ivy2/cache,$HOME/src/github.com/playframework/playframework
