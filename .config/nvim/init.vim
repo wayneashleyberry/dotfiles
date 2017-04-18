@@ -48,13 +48,13 @@ let g:lightline.colorscheme = 'gruvbox'
 if !has('nvim')
   set undofile
   set undodir=$HOME/.config/nvim/undo//
+  set noesckeys " Exit insert mode faster
 endif
 
 set nobackup
 set noswapfile
 set textwidth=80
 set autowrite
-set noesckeys " Exit insert mode faster
 set expandtab " Expand tabs to spaces
 set tabstop=4 " Render tabs 4 spaces wide
 set formatoptions=
@@ -98,6 +98,11 @@ set list listchars=tab:\|\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
 " vim-go
 let g:go_fmt_command = "goimports"
 let g:go_highlight_build_constraints = 1
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_trailing_whitespace_error = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
 
 " Move lines around using <C-k> and <C-j>
 let g:move_key_modifier = 'C'

@@ -72,9 +72,8 @@ alias gh='git open' # https://github.com/paulirish/git-open
 # https://github.com/GoogleCloudPlatform/cloud-functions-emulator
 alias fn='/usr/local/bin/functions'
 
-# Youtube DL
-alias yydl="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
-alias ydl="youtube-dl -o '%(uploader)s/%(playlist)s/%(title)s.%(ext)s'"
+# Download YouTube a playlist, with each video's index in the filename.
+alias ydl="youtube-dl -o '%(playlist_index)s - %(title)s.%(ext)s'"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
