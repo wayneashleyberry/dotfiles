@@ -82,7 +82,7 @@ export FZF_DEFAULT_OPTS='--prompt="△ "'
 # fd is like cd, but fuzzy
 fd() {
   local dir
-  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 4 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
+  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'Downloads' | grep -v 'Dropbox' | grep -v 'Library' | grep -v 'Music' | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
   cd "$dir"
 }
 
