@@ -38,10 +38,10 @@ let mapleader = '\'
 set background=dark
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_contrast_dark = 'hard'
-color gruvbox
+color molotov
 
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+" let g:lightline = {}
+" let g:lightline.colorscheme = 'gruvbox'
 
 " Although neovim has a good defaults for persistent undo, vim and macvim do
 " not… so for consistency we'll set it explicitly here.
@@ -158,10 +158,6 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Wq wq
 cnoreabbrev WQ wq
-
-" Change the cursor shape in normal/insert mode:
-" https://github.com/neovim/neovim/wiki/FAQ#how-can-i-change-the-cursor-shape-in-the-terminal
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " These will make it so that going to the next result in a search will center on
 " the line it's found in.
