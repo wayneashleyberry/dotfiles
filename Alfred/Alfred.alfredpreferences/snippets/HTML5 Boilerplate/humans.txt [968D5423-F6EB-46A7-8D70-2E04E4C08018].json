@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "# humanstxt.org\/\n# The humans responsible & technology colophon\n\n# TEAM\n\n    <name> -- <role> -- <twitter>\n\n# THANKS\n\n    <name>\n\n# TECHNOLOGY COLOPHON\n\n    CSS3, HTML5\n    Apache Server Configs, jQuery, Modernizr, Normalize.css",
+    "dontautoexpand" : true,
+    "uid" : "968D5423-F6EB-46A7-8D70-2E04E4C08018",
+    "name" : "humans.txt",
+    "keyword" : "humans.txt"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "# www.robotstxt.org\/\n\n# Allow crawling of all content\nUser-agent: *\nDisallow:",
+    "dontautoexpand" : true,
+    "uid" : "6F861712-6CF3-4919-B4DC-DE2A0D8A3F96",
+    "name" : "robots.txt",
+    "keyword" : "robots.txt"
+  }
+}

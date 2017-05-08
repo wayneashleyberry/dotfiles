@@ -5,6 +5,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'matze/vim-move'
+" Plug 'noahfrederick/vim-hemisu'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Tags
 " Plug 'xolox/vim-misc'
@@ -25,6 +27,7 @@ Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
 if (has('nvim'))
+    let g:deoplete#enable_at_startup = 1
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 else

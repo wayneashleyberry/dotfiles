@@ -40,6 +40,8 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 alias vi="nvim"
 export EDITOR='nvim'
 
+alias code="code-insiders"
+
 # Browsing
 alias l="tree --dirsfirst -aFCNL 1"
 alias ll="tree --dirsfirst -aChFupDLg 1"

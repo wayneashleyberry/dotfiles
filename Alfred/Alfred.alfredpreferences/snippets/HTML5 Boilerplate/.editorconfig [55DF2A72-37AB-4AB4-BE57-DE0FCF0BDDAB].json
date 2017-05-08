@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "# editorconfig.org\n\nroot = true\n\n[*]\ncharset = utf-8\nindent_size = 4\nindent_style = space\ninsert_final_newline = true\ntrim_trailing_whitespace = true\n\n[*.md]\ntrim_trailing_whitespace = false",
+    "dontautoexpand" : true,
+    "uid" : "55DF2A72-37AB-4AB4-BE57-DE0FCF0BDDAB",
+    "name" : ".editorconfig",
+    "keyword" : ".editorconfig"
+  }
+}
