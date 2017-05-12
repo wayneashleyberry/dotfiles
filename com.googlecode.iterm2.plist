@@ -2450,6 +2450,8 @@
 	<true/>
 	<key>DisableWindowSizeSnap</key>
 	<false/>
+	<key>EnableDivisionView</key>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -2584,15 +2586,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>970 381 445 77 0 0 1680 1050 </string>
+	<string>1159 294 445 77 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 359 700 511 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>539 381 796 473 0 0 1680 1028 </string>
+	<string>661 484 918 381 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>43 333 970 603 0 0 1680 1028 </string>
+	<string>419 231 1000 642 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>323 219 970 635 0 0 1680 1028 </string>
+	<string>185 -278 970 624 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_087C4C51-53D8-41F8-8612-426E255EB1E4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_087C4C51-53D8-41F8-8612-426E255EB1E4_selection</key>
@@ -3212,6 +3214,19 @@
 			<true/>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.10196078431372549</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.10588235294117647</real>
+				<key>Red Component</key>
+				<real>0.10980392156862745</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -3234,6 +3249,8 @@
 			<false/>
 			<key>Use Non-ASCII Font</key>
 			<false/>
+			<key>Use Tab Color</key>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1.0107127729668677</real>
 			<key>Visual Bell</key>
@@ -3302,13 +3319,19 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-24T08:24:46Z</date>
+	<date>2017-05-11T20:37:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.25240635016025642</real>
+	<key>StretchTabsToFillBar</key>
+	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>TerminalMargin</key>
+	<integer>20</integer>
+	<key>TerminalVMargin</key>
+	<integer>10</integer>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
@@ -3320,7 +3343,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.20170511-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
