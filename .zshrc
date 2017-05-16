@@ -34,7 +34,7 @@ setopt share_history # share command history data
 export GOPATH=$HOME/go
 
 # PATH (Homebrew, Go, Rust, Composer etc)
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin:$(yarn global bin)
 
 # Preferred editor for local and remote sessions
 alias vi="nvim"
@@ -72,7 +72,7 @@ alias gh='git open' # https://github.com/paulirish/git-open
 # Unfortunately zsh ships with a built in `functions` function, so to be able to
 # use the npm module it must be aliased to something else.
 # https://github.com/GoogleCloudPlatform/cloud-functions-emulator
-alias fn='/usr/local/bin/functions'
+alias fn='functions-emulator'
 
 # Download YouTube a playlist, with each video's index in the filename.
 alias ydl="youtube-dl -o '%(playlist_index)s - %(title)s.%(ext)s'"
@@ -139,10 +139,6 @@ autoload -U compinit && compinit
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-# JAVA :/
-
-# export CLASS_PATH=$HOME/.ivy2/cache
-# CLASS_PATH=$CLASS_PATH:$HOME/src/github.com/overhq/over-core-api
-# CLASS_PATH=$CLASS_PATH:$HOME/src/github.com/overhq/over-circles-api
-
 PROMPT='%(?.%F{magenta}❯.%F{red}!)%f '
+
+goproverb

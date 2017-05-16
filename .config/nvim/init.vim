@@ -94,7 +94,7 @@ set termguicolors " Enable true color support
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
-set wildignore+=*/smarty/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
+set wildignore+=*/smarty/*,*/node_modules/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
 set wildignorecase " Ignore case when completing filenames and directories
 set list listchars=tab:\|\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
 
