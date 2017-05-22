@@ -122,17 +122,6 @@ antibody bundle zsh-users/zsh-syntax-highlighting
 
 # GCP
 
-secrets(){
- export JWT_SECRET=`kubectl get secret over-jwt -o yaml | grep jwt.encryption.secret | tr -d 'jwt.encryption.secret: ' | tr -d '==' | base64 --decode`
- export JWT_SALT=`kubectl get secret over-jwt -o yaml | grep jwt.salt | tr -d 'jwt.salt: ' | tr -d '==' | base64 --decode`
-}
-
-alias gcloud-dev="gcloud auth activate-service-account --key-file ~/.secrets/over/gcloud/dev-client-secret.json && gcloud container clusters get-credentials over-api-dev-2 --zone us-east1-d --project over-services-dev"
-alias gcloud-stg="gcloud auth activate-service-account --key-file ~/.secrets/over/gcloud/staging-client-secret.json && gcloud container clusters get-credentials over-api-staging-3 --zone us-east1-d --project over-services"
-alias gcloud-prd="gcloud auth activate-service-account --key-file ~/.secrets/over/gcloud/prod-client-secret.json"
-
-eval "$(rbenv init -)"
-
 # This makes things work...
 autoload -U compinit && compinit
 
