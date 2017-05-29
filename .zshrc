@@ -36,6 +36,8 @@ export GOPATH=$HOME/go
 # PATH (Homebrew, Go, Rust, Composer etc)
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin:$(yarn global bin)
 
+alias node8="/Users/wayne/Downloads/node-v8.0.0-rc.1-darwin-x64/bin/node"
+
 # Preferred editor for local and remote sessions
 alias vi="nvim"
 export EDITOR='nvim'
@@ -118,6 +120,7 @@ PURE_CMD_MAX_EXEC_TIME=10
 source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
+# antibody bundle denysdovhan/spaceship-zsh-theme
 antibody bundle zsh-users/zsh-syntax-highlighting
 
 # GCP
