@@ -1,5 +1,10 @@
 DOTFILES=~/src/github.com/wayneashleyberry/dotfiles
 
+# Use some parts of oh-my-zsh
+source $DOTFILES/lib/completion.zsh
+source $DOTFILES/lib/history.zsh
+source $DOTFILES/lib/clipboard.zsh
+
 # PATH (Homebrew, Go, Rust, Composer etc)
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 
