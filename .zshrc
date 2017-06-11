@@ -4,12 +4,6 @@ unsetopt flowcontrol
 setopt auto_menu
 setopt complete_in_word
 setopt always_to_end
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
-zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
-zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/history.zsh
 HISTFILE=$HOME/.zsh_history
@@ -34,9 +28,12 @@ setopt share_history # share command history data
 export GOPATH=$HOME/go
 
 # PATH (Homebrew, Go, Rust, Composer etc)
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin:$(yarn global bin)
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 
-alias node8="/Users/wayne/Downloads/node-v8.0.0-rc.1-darwin-x64/bin/node"
+# Yarn
+PATH=$PATH:/usr/local/Cellar/node/8.1.0_1/bin
+
+alias node8="/Users/wayne/Downloads/node-v8.0.0-rc.2-darwin-x64/bin/node"
 
 # Preferred editor for local and remote sessions
 alias vi="nvim"
@@ -67,7 +64,7 @@ jr() {
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # Node Modules
-alias gh='git open' # https://github.com/paulirish/git-open
+alias gh='gh-home' # https://github.com/paulirish/git-open
 
 # Google Cloud Functions
 # ----------------------
@@ -119,9 +116,7 @@ PURE_CMD_MAX_EXEC_TIME=10
 
 source <(antibody init)
 antibody bundle mafredri/zsh-async
-antibody bundle sindresorhus/pure
-# antibody bundle denysdovhan/spaceship-zsh-theme
-antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle < ~/plugins.txt
 
 # GCP
 
@@ -133,4 +128,10 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 PROMPT='%(?.%F{magenta}❯.%F{red}!)%f '
 
-goproverb
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
