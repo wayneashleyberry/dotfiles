@@ -8,6 +8,7 @@
   "dependencies": {
     "@google-cloud/functions-emulator": "^1.0.0-alpha.20",
     "firebase-tools": "^3.9.1",
+    "flow-bin": "^0.47.0",
     "gh-home": "^1.4.1",
     "git-standup": "^2.1.8",
     "np": "^2.16.0",
