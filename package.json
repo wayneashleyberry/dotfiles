@@ -1,0 +1,17 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wayneashleyberry/dotfiles.git",
+  "author": "Wayne Ashley Berry <wayneashleyberry@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.20",
+    "firebase-tools": "^3.9.1",
+    "gh-home": "^1.4.1",
+    "git-standup": "^2.1.8",
+    "np": "^2.16.0",
+    "npx": "^5.1.2",
+    "vtop": "^0.5.7"
+  }
+}
