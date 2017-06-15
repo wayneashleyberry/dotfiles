@@ -5,6 +5,8 @@ source $DOTFILES/lib/completion.zsh
 source $DOTFILES/lib/history.zsh
 source $DOTFILES/lib/clipboard.zsh
 
+export GOPATH=~/go
+
 # PATH (Homebrew, Go, Rust, Composer etc)
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 

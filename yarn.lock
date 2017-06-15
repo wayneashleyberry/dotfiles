@@ -1687,7 +1687,7 @@ got@^5.0.0:
     unzip-response "^1.0.2"
     url-parse-lax "^1.0.0"
 
-got@^6.7.1:
+got@^6.1.1, got@^6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-6.7.1.tgz#240cd05785a9a18e561dc1b44b41c763ef1e8db0"
   dependencies:
@@ -2019,6 +2019,13 @@ is-fullwidth-code-point@^1.0.0:
 is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
+
+is-github-down@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-github-down/-/is-github-down-1.0.1.tgz#5eef10aaf7006e299cf8c35adc7a483194301841"
+  dependencies:
+    got "^6.1.1"
+    meow "^3.7.0"
 
 is-my-json-valid@^2.12.4:
   version "2.16.0"
