@@ -13,7 +13,7 @@
     "git-standup": "^2.1.8",
     "is-github-down": "^1.0.1",
     "np": "^2.16.0",
-    "npx": "^5.3.0",
+    "npx": "^5.4.0",
     "trash-cli": "^1.4.0",
     "vtop": "^0.5.7",
     "wunderline": "^4.6.1"
