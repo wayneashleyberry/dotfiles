@@ -1,0 +1,45 @@
+{
+	"workbench.iconTheme": "material-icon-theme",
+	"editor.insertSpaces": false,
+	"editor.renderIndentGuides": false,
+	"workbench.sideBar.location": "left",
+	"workbench.activityBar.visible": true,
+	"editor.scrollBeyondLastLine": false,
+	"files.autoSave": "onFocusChange",
+	"search.useIgnoreFilesByDefault": true,
+	"files.exclude": {
+		"**/*.js": {
+			"when": "$(basename).ts"
+		},
+		"**/*.js.map": true,
+		"node_modules/**/*": true,
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true
+	},
+	"editor.renderWhitespace": "boundary",
+	"window.newWindowDimensions": "maximized",
+	"search.exclude": {
+		"**/coverage": true,
+		"**/vendor": true,
+		"**/node_modules": true,
+		"**/bower_components": true
+	},
+	"typescript.referencesCodeLens.enabled": false,
+	"html.format.enable": true,
+	"git.countBadge": "off",
+	"workbench.editor.showTabs": false,
+	"html.format.wrapLineLength": 0,
+	"editor.minimap.enabled": false,
+	"diffEditor.renderSideBySide": false,
+	"editor.lineNumbers": "on",
+	"window.title": "${rootName}${separator}${activeEditorMedium}",
+	"tslint.rulesDirectory": "./node_modules/codelyzer",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.formatOnSave": true,
+	"[html]": {
+		"editor.formatOnSave": false
+	}
+}
