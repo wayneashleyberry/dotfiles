@@ -6,15 +6,14 @@
   "author": "Wayne Ashley Berry <wayneashleyberry@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/functions-emulator": "^1.0.0-alpha.21",
-    "firebase-tools": "^3.9.1",
     "flow-bin": "^0.48.0",
     "gh-home": "^1.4.1",
     "git-standup": "^2.1.8",
     "is-github-down": "^1.0.1",
+    "js-beautify": "^1.6.14",
     "np": "^2.16.0",
     "npx": "^6.1.0",
-    "threejs-term": "^2.0.0",
+    "prettier": "^1.4.4",
     "trash-cli": "^1.4.0",
     "vtop": "^0.5.7",
     "wunderline": "^4.6.1"
