@@ -34,7 +34,6 @@ alias fn='functions-emulator'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS='--prompt="△ "'
 
 # fd is like cd, but fuzzy
 fd() {
