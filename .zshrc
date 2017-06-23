@@ -26,13 +26,6 @@ alias gs='git status -sb'
 alias l="tree --dirsfirst -aFCNL 1"
 alias ll="tree --dirsfirst -aChFupDLg 1"
 
-# Google Cloud Functions
-# ----------------------
-# Unfortunately zsh ships with a built in `functions` function, so to be able to
-# use the npm module it must be aliased to something else.
-# https://github.com/GoogleCloudPlatform/cloud-functions-emulator
-alias fn='functions-emulator'
-
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -43,10 +36,11 @@ fd() {
   cd "$dir"
 }
 
-# Antibody Plugins
+# # Antibody Plugins
 source <(antibody init)
 antibody bundle mafredri/zsh-async
-antibody bundle < $DOTFILES/plugins.txt
+antibody bundle sindresorhus/pure
+# antibody bundle < $DOTFILES/plugins.txt
 
 # This makes things work...
 autoload -U compinit && compinit
@@ -54,16 +48,35 @@ autoload -U compinit && compinit
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-# Pure prompt tweaks
-PROMPT='%(?.%F{magenta}❯.%F{red}!)%f '
-
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Lazy load nvm, node and npm
+nvm() {
+    unset -f nvm
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    nvm "$@"
+}
+
+node() {
+    unset -f node
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    node "$@"
+}
+
+npm() {
+    unset -f npm
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    npm "$@"
+}
 
 # [[ $TMUX = "" ]] && export TERM="xterm-256color"
 [[ $TMUX != "" ]] && export TERM="screen-256color"
