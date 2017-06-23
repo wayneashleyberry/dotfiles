@@ -10,15 +10,17 @@ Plug 'sbdchd/neoformat'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Colors
 Plug 'dracula/vim'
 Plug 'reedes/vim-colors-pencil'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 set background=dark
 
-color pencil
+color gruvbox
 
 set autowrite
 set cursorline
@@ -31,8 +33,8 @@ set relativenumber number
 set splitright splitbelow
 set termguicolors
 
-" let g:lightline = {}
-" let g:lightline.colorscheme = 'jellybeans'
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 let g:move_key_modifier = 'C'
 let g:neoformat_enabled_css = ['prettier']
 let mapleader = '\'

@@ -1,3 +1,4 @@
+export TERM=xterm-256color
 export DOTFILES=~/src/github.com/wayneashleyberry/dotfiles
 export EDITOR='nvim'
 export GOPATH=~/go
