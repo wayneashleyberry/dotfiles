@@ -38,11 +38,11 @@ fd() {
   cd "$dir"
 }
 
-# # Antibody Plugins
+# Antibody Plugins
 source <(antibody init)
 antibody bundle mafredri/zsh-async
-antibody bundle sindresorhus/pure
-# antibody bundle < $DOTFILES/plugins.txt
+# antibody bundle sindresorhus/pure
+antibody bundle < $DOTFILES/plugins.txt
 
 # This makes things work...
 autoload -U compinit && compinit
