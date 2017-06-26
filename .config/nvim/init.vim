@@ -10,7 +10,7 @@ Plug 'sbdchd/neoformat'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-Plug 'tmux-plugins/vim-tmux-focus-events'
+" Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Colors
 Plug 'dracula/vim'
@@ -24,7 +24,7 @@ color gruvbox
 
 set autowrite
 set cursorline
-set ignorecase smartcase
+set ignorecase smartcase wildignorecase
 set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
 set nobackup noswapfile
 set noshowmode noshowcmd
@@ -45,6 +45,8 @@ map <leader>w :vsp<cr>
 nnoremap <leader><space> :noh<cr>
 nnoremap N Nzzzv
 nnoremap n nzzzv
+nnoremap y "*y
+vnoremap y "*y
 
 command! Config :e $MYVIMRC
 command! SourceConfig :source $MYVIMRC
