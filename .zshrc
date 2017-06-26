@@ -15,8 +15,6 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 PATH=$PATH:$DOTFILES/node_modules/.bin
 
 # Aliases
-alias :e='nvim'
-alias :q='exit'
 alias ../..='cd ../..'
 alias ..='cd ..'
 alias br='git checkout -b'

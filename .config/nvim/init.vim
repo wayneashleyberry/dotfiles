@@ -10,7 +10,6 @@ Plug 'sbdchd/neoformat'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-" Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Colors
 Plug 'dracula/vim'
@@ -22,6 +21,7 @@ set background=dark
 
 color gruvbox
 
+set nolazyredraw
 set autowrite
 set cursorline
 set ignorecase smartcase wildignorecase
