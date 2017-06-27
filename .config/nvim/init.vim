@@ -26,7 +26,7 @@ set autowrite
 set cursorline
 set ignorecase smartcase wildignorecase
 set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
-set nobackup noswapfile
+set undofile nobackup noswapfile
 set noshowmode noshowcmd
 set nowrap
 set relativenumber number
@@ -37,6 +37,7 @@ let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 let g:move_key_modifier = 'C'
 let g:neoformat_enabled_css = ['prettier']
+let g:neoformat_enabled_javascript = ['prettier']
 let mapleader = '\'
 
 map <C-p> :GFiles<CR>
