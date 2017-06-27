@@ -18,7 +18,6 @@ PATH=$PATH:$DOTFILES/node_modules/.bin
 alias ../..='cd ../..'
 alias ..='cd ..'
 alias br='git checkout -b'
-alias code="code-insiders"
 alias gca='git commit -am'
 alias gg='cd $(git rev-parse --show-toplevel)'
 alias gh='gh-home'
