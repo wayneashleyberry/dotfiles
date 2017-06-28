@@ -78,4 +78,4 @@ npm() {
 }
 
 # [[ $TMUX = "" ]] && export TERM="xterm-256color"
-[[ $TMUX != "" ]] && export TERM="screen-256color"
+# [[ $TMUX != "" ]] && export TERM="screen-256color"
