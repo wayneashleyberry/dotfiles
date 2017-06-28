@@ -15,8 +15,10 @@ Plug 'tpope/vim-commentary'
 Plug 'dracula/vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
+let base16colorspace=256
 set background=dark
 
 color gruvbox
