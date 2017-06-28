@@ -15,6 +15,8 @@ call plug#end()
 
 color gruvbox
 
+let mapleader = '\'
+
 let g:terminal_color_0 = '#282828'
 let g:terminal_color_1 = '#cc241d'
 let g:terminal_color_2 = '#98971a'
@@ -51,7 +53,6 @@ let g:lightline.colorscheme = 'gruvbox'
 let g:move_key_modifier = 'C'
 let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
-let mapleader = '\'
 
 map <C-p> :GFiles<CR>
 map <Tab> %
