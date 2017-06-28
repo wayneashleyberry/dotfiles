@@ -24,6 +24,7 @@ alias gh='gh-home'
 alias gs='git status -sb'
 alias l="tree --dirsfirst -aFCNL 1"
 alias ll="tree --dirsfirst -aChFupDLg 1"
+alias yrn="yarn"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

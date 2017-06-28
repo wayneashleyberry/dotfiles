@@ -10,6 +10,7 @@ Plug 'sbdchd/neoformat'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Colors
 Plug 'dracula/vim'
