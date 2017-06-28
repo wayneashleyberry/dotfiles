@@ -17,10 +17,10 @@
     "jsonlint": "^1.6.2",
     "np": "^2.16.0",
     "npx": "^8.0.0",
-    "prettier": "^1.4.4",
+    "prettier": "^1.5.2",
     "trash-cli": "^1.4.0",
     "tslint": "^5.4.3",
-    "typescript": "^2.3.4",
+    "typescript": "^2.4.1",
     "vtop": "^0.5.7",
     "wunderline": "^4.6.1"
   }
