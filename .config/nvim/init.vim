@@ -6,6 +6,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
+Plug 'tpope/vim-eunuch'
 " Plug 'sbdchd/neoformat'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
@@ -14,6 +15,7 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 color gruvbox
+let g:gruvbox_sign_column = 'bg0'
 
 let mapleader = '\'
 
@@ -35,25 +37,27 @@ let g:terminal_color_14 = '#8ec07c'
 let g:terminal_color_15 = '#ebdbb2'
 
 set autoread
-set background=dark
-set nolazyredraw
 set autowrite
+set background=dark
 set cursorline
+set gdefault
 set ignorecase smartcase wildignorecase
 set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
-set undofile nobackup noswapfile
+set nolazyredraw
 set noshowmode noshowcmd
 set nowrap
 set relativenumber number
 set splitright splitbelow
 set termguicolors
+set undofile nobackup noswapfile
 
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
+" let g:move_key_modifier = 'C'
 
-map <C-p> :GFiles<CR>
+map <C-p> :Files<CR>
 map <Tab> %
 map <leader>w :vsp<cr>
 nnoremap <leader><space> :noh<cr>
