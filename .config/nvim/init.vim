@@ -57,7 +57,7 @@ let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
 " let g:move_key_modifier = 'C'
 
-map <C-p> :Files<CR>
+map <C-p> :GFiles<CR>
 map <Tab> %
 map <leader>w :vsp<cr>
 nnoremap <leader><space> :noh<cr>
