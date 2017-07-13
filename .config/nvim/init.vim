@@ -7,7 +7,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-eunuch'
-" Plug 'sbdchd/neoformat'
+Plug 'fatih/vim-go'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -50,12 +50,27 @@ set relativenumber number
 set splitright splitbelow
 set termguicolors
 set undofile nobackup noswapfile
+set tabstop=4
 
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
 " let g:move_key_modifier = 'C'
+
+let g:polyglot_disabled = ['go']
+
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+let g:go_fmt_command='goimports'
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
 
 map <C-p> :GFiles<CR>
 map <Tab> %
@@ -75,11 +90,6 @@ augroup autosave
     au BufLeave * :silent! wa!
 augroup END
 
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre * Neoformat
-" augroup END
-
 " Faster split navigation (works in terminals as well)
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
@@ -89,3 +99,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+augroup filetypedetect
+    au BufRead,BufNewFile *.yml.template setfiletype yaml
+augroup END
