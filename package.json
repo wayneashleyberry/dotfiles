@@ -6,7 +6,9 @@
   "author": "Wayne Ashley Berry <wayneashleyberry@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "eslint": "^4.0.0",
+    "emoj": "^1.1.0",
+    "eslint": "^4.1.0",
+    "firebase-tools": "^3.9.1",
     "flow-bin": "^0.48.0",
     "gh-home": "^1.4.1",
     "git-standup": "^2.1.8",
@@ -14,11 +16,11 @@
     "js-beautify": "^1.6.14",
     "jsonlint": "^1.6.2",
     "np": "^2.16.0",
-    "npx": "^6.1.0",
-    "prettier": "^1.4.4",
+    "npx": "^8.0.0",
+    "prettier": "^1.5.2",
     "trash-cli": "^1.4.0",
     "tslint": "^5.4.3",
-    "typescript": "^2.3.4",
+    "typescript": "^2.4.1",
     "vtop": "^0.5.7",
     "wunderline": "^4.6.1"
   }

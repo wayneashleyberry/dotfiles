@@ -1,207 +1,111 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'farmergreg/vim-lastplace'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
-" Plug 'noahfrederick/vim-hemisu'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Tags
-" Plug 'xolox/vim-misc'
-" Plug 'xolox/vim-easytags'
-" Plug 'majutsushi/tagbar'
-
-" Plug 'w0rp/ale'
-" Plug 'dodie/vim-disapprove-deep-indentation'
-" Plug 'neomake/neomake'
 Plug 'roman/golden-ratio'
+Plug 'tpope/vim-eunuch'
+Plug 'fatih/vim-go'
+Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-vinegar'
-
-" Colors
 Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
-
-if (has('nvim'))
-    let g:deoplete#enable_at_startup = 1
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
-else
-    Plug 'tpope/vim-sensible'
-    Plug 'ctrlpvim/ctrlp.vim'
-endif
 call plug#end()
+
+color gruvbox
+let g:gruvbox_sign_column = 'bg0'
 
 let mapleader = '\'
 
-set background=dark
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_contrast_dark = 'hard'
-color molotov
+let g:terminal_color_0 = '#282828'
+let g:terminal_color_1 = '#cc241d'
+let g:terminal_color_2 = '#98971a'
+let g:terminal_color_3 = '#d79921'
+let g:terminal_color_4 = '#458588'
+let g:terminal_color_5 = '#b16286'
+let g:terminal_color_6 = '#689d6a'
+let g:terminal_color_7 = '#a89984'
+let g:terminal_color_8 = '#928374'
+let g:terminal_color_9 = '#fb4934'
+let g:terminal_color_10 = '#b8bb26'
+let g:terminal_color_11 = '#fabd2f'
+let g:terminal_color_12 = '#83a598'
+let g:terminal_color_13 = '#d3869b'
+let g:terminal_color_14 = '#8ec07c'
+let g:terminal_color_15 = '#ebdbb2'
 
-" let g:lightline = {}
-" let g:lightline.colorscheme = 'gruvbox'
-
-" Although neovim has a good defaults for persistent undo, vim and macvim do
-" not… so for consistency we'll set it explicitly here.
-if !has('nvim')
-  set undofile
-  set undodir=$HOME/.config/nvim/undo//
-  set noesckeys " Exit insert mode faster
-endif
-
-set nobackup
-set noswapfile
-set textwidth=80
+set autoread
 set autowrite
-set expandtab " Expand tabs to spaces
-set tabstop=4 " Render tabs 4 spaces wide
-set formatoptions=
-set formatoptions+=c " Format comments
-set formatoptions+=r " Continue comments by default
-set formatoptions+=o " Make comment when using o or O from comment line
-set formatoptions+=q " Format comments with gq
-set formatoptions+=n " Recognize numbered lists
-set formatoptions+=2 " Use indent from 2nd line of a paragraph
-set formatoptions+=l " Don't break lines that are already long
-set formatoptions+=1 " Break before 1-letter words
-set gdefault " By default add g flag to search/replace. Add g to toggle
-set hlsearch " Highlight all search results
-set hidden " When a buffer is brought to foreground, remember undo history and marks
-set ignorecase " Ignore case of searches
-set noerrorbells " Disable error bells
-set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
-set noshowmode " Don't show the current mode (lightline.vim takes care of us)
-set nostartofline " Don't reset cursor to start of line when moving around
-set nowrap " Don't wrap text
-" set number relativenumber " Line numbers
-set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
-set report=0 " Show all changes
-set scrolloff=3 " Start scrolling three lines before horizontal border of window
-set shiftwidth=4 " The # of spaces for indenting
-set showtabline=1 " Show the tab bar, if there are tabs
-set sidescrolloff=3 " Start scrolling three columns before vertical border of window
-set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
-set softtabstop=2 " Tab key results in 2 spaces
-set splitbelow " New window goes below
-set splitright " New windows goes right
-set title " Show the filename in the window titlebar
-set termguicolors " Enable true color support
-set visualbell " Use visual bell instead of audible bell (annnnnoying)
-set wildignore+=.DS_Store
-set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
-set wildignore+=*/smarty/*,*/node_modules/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
-set wildignorecase " Ignore case when completing filenames and directories
-set list listchars=tab:\|\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:· " Fancy invisible characters
+set background=dark
+set cursorline
+set gdefault
+set ignorecase smartcase wildignorecase
+set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
+set nolazyredraw
+set noshowmode noshowcmd
+set nowrap
+set relativenumber number
+set splitright splitbelow
+set termguicolors
+set undofile nobackup noswapfile
+set tabstop=4
+set inccommand=split
 
-" vim-go
-let g:go_fmt_command = "goimports"
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_space_tab_error = 1
-let g:go_highlight_trailing_whitespace_error = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_functions = 1
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
+let g:neoformat_enabled_css = ['prettier']
+let g:neoformat_enabled_javascript = ['prettier']
+" let g:move_key_modifier = 'C'
 
-" Move lines around using <C-k> and <C-j>
-let g:move_key_modifier = 'C'
+let g:polyglot_disabled = ['go']
 
-" Modern directional keys
-noremap j gj
-noremap k gk
-noremap gj j
-noremap gk k
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
 
-" Clear search highlighting using the <space> key
-nnoremap <leader><space> :noh<cr>
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+let g:go_fmt_command='goimports'
+" let g:go_highlight_build_constraints = 1
+" let g:go_highlight_extra_types = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_types = 1
 
-" Use <Tab> for bracket matching
+map <C-p> :GFiles<CR>
 map <Tab> %
-
-" Open a split window and switch to it
 map <leader>w :vsp<cr>
+nnoremap <leader><space> :noh<cr>
+nnoremap N Nzzzv
+nnoremap n nzzzv
+nnoremap y "*y
+vnoremap y "*y
 
-" Neovim gets FZF, Vim gets CtrlP
-if (has('nvim'))
-    map <C-b> :Buffers<CR>
-    map <C-p> :Files<CR>
-else
-    let g:ctrlp_working_path_mode = 0
-    let g:ctrlp_clear_cache_on_exit = 1
-    let g:ctrlp_custom_ignore = 'node_modules\|vendor\|target'
-endif
-
-" Edit and source config files
 command! Config :e $MYVIMRC
 command! SourceConfig :source $MYVIMRC
 
-" Save files when losing focus, essentially autosave.
 augroup autosave
     au!
     au FocusLost * :silent! wa!
     au BufLeave * :silent! wa!
 augroup END
 
-" Snippets
-nnoremap ,html :-1read $HOME/src/github.com/h5bp/html5-boilerplate/dist/index.html<CR>/><<CR>:set nohlsearch<CR>a
+" Faster split navigation (works in terminals as well)
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
-" todo.md
-nnoremap <leader>et :e ~/Dropbox/todo.md<CR>
-
-" TextMate style formatting
-nnoremap Q gqip
-vnoremap Q gq
-
-" Fix some common and easy mistakes when typing commands:
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Wq wq
-cnoreabbrev WQ wq
-
-" These will make it so that going to the next result in a search will center on
-" the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-" Same when moving up and down
-noremap <C-d> <C-d>zz
-noremap <C-u> <C-u>zz
-
-" Yank to system clipboard
-nnoremap y "*y
-vnoremap y "*y
-
-" Time out on key codes but not mappings.
-" Basically this makes terminal Vim work sanely.
-if !has('gui_running')
-  set notimeout
-  set ttimeout
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
-
-" Neomake
-" autocmd! FocusLost,BufReadPost,BufWritePost * Neomake
-" let g:neomake_go_enabled_makers = []
-" let g:neomake_html_enabled_makers = []
-" let g:neomake_php_enabled_makers = ['php', 'phpcs']
-" let g:neomake_javascript_enabled_makers = ['eslint']
-" let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
-let g:neomake_java_javac_args = ['-cp', '.']
-
-" vim-polyglot
-let g:polyglot_disabled = ['go']
-
-" vim-gitgutter
-" let g:gitgutter_sign_column_always = 1
-
-" Tags
-" set tags=./tags,tags,$HOME,$HOME/.ivy2/cache,$HOME/src/github.com/playframework/playframework
+augroup filetypedetect
+    au BufRead,BufNewFile *.yml.template setfiletype yaml
+augroup END
