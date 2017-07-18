@@ -46,7 +46,7 @@ set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:
 set nolazyredraw
 set noshowmode noshowcmd
 set nowrap
-set relativenumber number
+" set relativenumber number
 set splitright splitbelow
 set termguicolors
 set undofile nobackup noswapfile
@@ -69,6 +69,8 @@ au FileType go set tabstop=4
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command='goimports'
+" let g:go_updatetime = 300
+
 " let g:go_highlight_build_constraints = 1
 " let g:go_highlight_extra_types = 1
 " let g:go_highlight_fields = 1
