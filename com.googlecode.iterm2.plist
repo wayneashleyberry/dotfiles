@@ -12,6 +12,10 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>BadgeRightMargin</key>
+	<integer>0</integer>
+	<key>BadgeTopMargin</key>
+	<integer>0</integer>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Dracula</key>
@@ -4472,9 +4476,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>797 706 770 429 0 0 1920 1178 </string>
+	<string>797 714 1018 447 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>89 73 988 1028 0 0 1920 1178 </string>
+	<string>500 388 980 586 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>236 222 980 586 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -5266,7 +5270,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-13T09:33:06Z</date>
+	<date>2017-07-28T05:40:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -5280,9 +5284,9 @@
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TerminalMargin</key>
-	<integer>10</integer>
+	<integer>0</integer>
 	<key>TerminalVMargin</key>
-	<integer>10</integer>
+	<integer>0</integer>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
