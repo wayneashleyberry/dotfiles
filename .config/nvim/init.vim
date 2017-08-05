@@ -1,11 +1,11 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'farmergreg/vim-lastplace'
+Plug 'lambdalisue/gina.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
-Plug 'tpope/vim-fugitive'
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
@@ -42,6 +42,11 @@ set undofile nobackup noswapfile
 set tabstop=2
 set inccommand=split
 
+function GitBranch() abort
+  let branch = gina#component#repo#branch()
+  return printf('%s', branch)
+endfunction
+
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ 'active': {
@@ -49,7 +54,7 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'GitBranch'
       \ },
       \ }
 
