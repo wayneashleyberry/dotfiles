@@ -22,8 +22,8 @@ alias gca='git commit -am'
 alias gg='cd $(git rev-parse --show-toplevel)'
 alias gh='gh-home'
 alias gs='git status -sb'
-alias l="tree --dirsfirst -aFCNL 1"
-alias ll="tree --dirsfirst -aChFupDLg 1"
+alias l="exa -1"
+alias ll="exa --long --git"
 alias y="yarn"
 
 # FZF
@@ -51,10 +51,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 [[ $TMUX != "" ]] && export TERM="screen-256color"
