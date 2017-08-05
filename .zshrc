@@ -26,6 +26,11 @@ alias l="exa -1"
 alias ll="exa --long --git"
 alias y="yarn"
 
+weather() {
+  wttr=`curl -s wttr.in/Cape\ Town`
+  echo $wttr | head -n 37
+}
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
