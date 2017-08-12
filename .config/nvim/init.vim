@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'farmergreg/vim-lastplace'
-Plug 'lambdalisue/gina.vim'
+" Plug 'lambdalisue/gina.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -9,6 +9,7 @@ Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
+Plug 'nightsense/seabird'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -28,11 +29,11 @@ color gruvbox
 set autoread
 set autowrite
 set background=dark
-set cursorline
+" set cursorline
 set gdefault
 set ignorecase smartcase wildignorecase
-set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
-set nolazyredraw
+set listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
+" set nolazyredraw
 set noshowmode noshowcmd
 set nowrap
 " set relativenumber number
@@ -42,21 +43,11 @@ set undofile nobackup noswapfile
 set tabstop=2
 set inccommand=split
 
-function GitBranch() abort
-  let branch = gina#component#repo#branch()
-  return printf('%s', branch)
-endfunction
-
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'GitBranch'
-      \ },
       \ }
+
+let g:gitgutter_sign_column_always = 0
 
 let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
@@ -65,22 +56,13 @@ let g:neoformat_enabled_javascript = ['prettier']
 let g:polyglot_disabled = ['go']
 
 au FileType go set noexpandtab
-au FileType go set shiftwidth=2
-au FileType go set softtabstop=2
-au FileType go set tabstop=2
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
 
 let g:go_auto_type_info = 1
 let g:go_fmt_command='goimports'
 let g:go_play_open_browser = 1
-
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
 
 map <C-p> :Files<CR>
 map <Tab> %
@@ -108,3 +90,26 @@ nnoremap <C-l> <C-w>l
 augroup filetypedetect
     au BufRead,BufNewFile *.yml.template setfiletype yaml
 augroup END
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+command! -bang -nargs=* Grep
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)

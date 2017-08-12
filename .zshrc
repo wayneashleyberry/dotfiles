@@ -83,12 +83,12 @@ local color0E='#d3869b'
 local color0F='#d65d0e'
 
 export FZF_DEFAULT_OPTS="
-  --height 40% --border
+  --border --height 30%
+  --prompt '❯ '
   --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
   --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D
 "
-
 }
 
 _gen_fzf_default_opts
