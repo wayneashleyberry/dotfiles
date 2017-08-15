@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'farmergreg/vim-lastplace'
 " Plug 'lambdalisue/gina.vim'
+Plug 'fxn/vim-monochrome'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -24,6 +25,7 @@ let mapleader = '\'
 
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#single_quote = 'false'
+let g:prettier#config#trailing_comma = 'none'
 
 " let g:deoplete#enable_at_startup = 1
 
