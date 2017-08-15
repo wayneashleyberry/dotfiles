@@ -6,6 +6,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
@@ -24,6 +25,8 @@ let mapleader = '\'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#single_quote = 'false'
 
+" let g:deoplete#enable_at_startup = 1
+
 color gruvbox
 
 set autoread
@@ -39,6 +42,7 @@ set nowrap
 " set relativenumber number
 set splitright splitbelow
 set termguicolors
+set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 set undofile nobackup noswapfile
 set tabstop=2
 set inccommand=split
