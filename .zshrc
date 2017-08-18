@@ -21,8 +21,8 @@ alias gca='git commit -am'
 alias gg='cd $(git rev-parse --show-toplevel)'
 alias gh='gh-home'
 alias gs='git status -sb'
-alias l="exa -1 -F --color never"
-alias ll="exa --long --git --group-directories-first -F --time-style long-iso --color never"
+alias l="exa -1 -F --group-directories-first"
+alias ll="exa --long --git --group-directories-first -F --time-style long-iso"
 
 weather() {
   wttr=`curl -s wttr.in/Cape\ Town`
