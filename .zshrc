@@ -2,6 +2,7 @@ export TERM=xterm-256color
 export DOTFILES=~/src/github.com/wayneashleyberry/dotfiles
 export EDITOR='nvim'
 export GOPATH=~/go
+export RPROMPT='%t'
 
 # Use some parts of oh-my-zsh
 source $DOTFILES/lib/completion.zsh
