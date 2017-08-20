@@ -4,7 +4,7 @@ export EDITOR='nvim'
 export GOPATH=~/go
 export RPROMPT='%t'
 export PROMPT_TIME=`date`
-RPROMPT='%F{242} $PROMPT_TIME %f'
+RPROMPT='%F{242}$PROMPT_TIME%f'
 
 # Use some parts of oh-my-zsh
 source $DOTFILES/lib/completion.zsh
