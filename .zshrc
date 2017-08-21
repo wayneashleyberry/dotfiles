@@ -2,9 +2,8 @@ export TERM=xterm-256color
 export DOTFILES=~/src/github.com/wayneashleyberry/dotfiles
 export EDITOR='nvim'
 export GOPATH=~/go
-export RPROMPT='%t'
-export PROMPT_TIME=`date`
-RPROMPT='%F{242}$PROMPT_TIME%f'
+# export PROMPT_TIME=`date`
+# export RPROMPT='%F{242}$PROMPT_TIME%f'
 
 # Use some parts of oh-my-zsh
 source $DOTFILES/lib/completion.zsh
@@ -23,8 +22,11 @@ alias gca='git commit -am'
 alias gg='cd $(git rev-parse --show-toplevel)'
 alias gh='gh-home'
 alias gs='git status -sb'
-alias l="exa -1 -F --group-directories-first"
-alias ll="exa --long --git --group-directories-first -F --time-style long-iso"
+alias l='exa -1 -F --group-directories-first'
+alias ll='exa --long --git --group-directories-first -F --time-style long-iso'
+alias j='z'
+alias vi='nvim'
+alias vim='nvim'
 
 weather() {
   wttr=`curl -s wttr.in/Cape\ Town`
@@ -53,4 +55,9 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 [[ $TMUX != "" ]] && export TERM="screen-256color"
 
+. /usr/local/etc/profile.d/z.sh
+
 goproverb
+
+# echo '%F{242}`goproverb`%f'
+# export RPROMPT='%F{242}$PROMPT_TIME%f'

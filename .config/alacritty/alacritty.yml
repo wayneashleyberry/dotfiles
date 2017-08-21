@@ -66,8 +66,11 @@ font:
   # false.
   use_thin_strokes: true
 
-# Should display the render timer
+# Should display te render timer
 render_timer: false
+
+# Background opacity
+background_opacity: 0.96
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
