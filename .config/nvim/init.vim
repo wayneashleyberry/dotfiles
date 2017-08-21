@@ -14,10 +14,13 @@ Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
+Plug 't9md/vim-choosewin'
 Plug 'prettier/vim-prettier', {
 	\ 'do': 'yarn install',
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 call plug#end()
+
+nmap - <Plug>(choosewin)
 
 let mapleader = '\'
 
