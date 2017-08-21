@@ -41,6 +41,23 @@ fd() {
   cd "$dir"
 }
 
+hi() {
+  weather=`curl -s wttr.in/Cape\ Town`
+
+  nvim -c PlugUpdate -c qa!
+  antibody update
+  brew update
+  brew upgrade
+  brew prune
+  brew cleanup
+  clear
+	date
+	hr -
+	goproverb
+  hr -
+  echo $weather | head -n 17
+}
+
 source <(antibody init)
 antibody bundle mafredri/zsh-async
 antibody bundle < $DOTFILES/plugins.txt
@@ -56,8 +73,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 [[ $TMUX != "" ]] && export TERM="screen-256color"
 
 . /usr/local/etc/profile.d/z.sh
-
-goproverb
 
 # echo '%F{242}`goproverb`%f'
 # export RPROMPT='%F{242}$PROMPT_TIME%f'
