@@ -20,6 +20,8 @@ Plug 'prettier/vim-prettier', {
 call plug#end()
 
 nmap - <Plug>(choosewin)
+let g:choosewin_label = '123456789'
+let g:choosewin_tablabel = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 let mapleader = '\'
 

@@ -33,6 +33,8 @@ weather() {
   echo $wttr | head -n 37
 }
 
+export FZF_DEFAULT_OPTS='--no-bold --border --height=30%'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fd() {
