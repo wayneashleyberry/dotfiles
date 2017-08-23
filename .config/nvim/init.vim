@@ -8,7 +8,6 @@ Plug 'matze/vim-move'
 Plug 'roman/golden-ratio'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
-Plug 'nightsense/seabird'
 Plug 'sgur/vim-editorconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -36,22 +35,18 @@ set autowrite
 set background=dark
 set gdefault
 set ignorecase smartcase wildignorecase
+set inccommand=split
 set listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
 set noshowmode noshowcmd
 set nowrap
 set splitright splitbelow
+set tabstop=2
 set termguicolors
 set undofile nobackup noswapfile
-set tabstop=2
-set inccommand=split
+
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ }
-
-let g:gitgutter_sign_column_always = 0
-
-let g:neoformat_enabled_css = ['prettier']
-let g:neoformat_enabled_javascript = ['prettier']
 
 let g:polyglot_disabled = ['go']
 
@@ -60,9 +55,29 @@ au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
 
-let g:go_auto_type_info = 1
-let g:go_fmt_command='goimports'
-let g:go_play_open_browser = 1
+let g:go_fmt_fail_silently = 0
+let g:go_fmt_command = "goimports"
+let g:go_list_type = "quickfix"
+let g:go_auto_type_info = 0
+let g:go_def_mode = "guru"
+let g:go_echo_command_info = 1
+let g:go_gocode_autobuild = 0
+let g:go_gocode_unimported_packages = 1
+
+let g:go_autodetect_gopath = 1
+let g:go_info_mode = "guru"
+
+" let g:go_metalinter_autosave = 1
+" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 0
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_types = 0
+
+let g:go_modifytags_transform = 'camelcase'
 
 map <C-p> :GFiles<CR>
 map <Tab> %

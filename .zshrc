@@ -16,7 +16,6 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$HOME/.composer/vendor/bin
 # Dotfile packages
 PATH=$PATH:$DOTFILES/node_modules/.bin
 
-# Aliases
 alias br='git checkout -b'
 alias gca='git commit -am'
 alias gg='cd $(git rev-parse --show-toplevel)'
@@ -25,15 +24,13 @@ alias gs='git status -sb'
 alias l='exa -1 -F --group-directories-first'
 alias ll='exa --long --git --group-directories-first -F --time-style long-iso'
 alias j='z'
-alias vi='nvim'
-alias vim='nvim'
 
 weather() {
   wttr=`curl -s wttr.in/Cape\ Town`
   echo $wttr | head -n 37
 }
 
-export FZF_DEFAULT_OPTS='--no-bold --border --height=30%'
+export FZF_DEFAULT_OPTS='--height=30%'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -44,20 +41,12 @@ fd() {
 }
 
 hi() {
-  weather=`curl -s wttr.in/Cape\ Town`
-
   nvim -c PlugUpdate -c qa!
   antibody update
   brew update
   brew upgrade
   brew prune
   brew cleanup
-  clear
-	date
-	hr -
-	goproverb
-  hr -
-  echo $weather | head -n 17
 }
 
 source <(antibody init)
