@@ -70,7 +70,7 @@ font:
 render_timer: false
 
 # Background opacity
-background_opacity: 0.96
+background_opacity: 1
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
