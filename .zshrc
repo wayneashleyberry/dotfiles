@@ -21,8 +21,8 @@ alias gca='git commit -am'
 alias gg='cd $(git rev-parse --show-toplevel)'
 alias gh='gh-home'
 alias gs='git status -sb'
-alias l='exa -1 -F --group-directories-first'
-alias ll='exa --long --git --group-directories-first -F --time-style long-iso'
+alias l='exa -1 -F --group-directories-first -a'
+alias ll='exa --long --git --group-directories-first -F --time-style long-iso -a'
 alias j='z'
 
 weather() {

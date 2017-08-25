@@ -36,9 +36,10 @@ set background=dark
 set gdefault
 set ignorecase smartcase wildignorecase
 set inccommand=split
-set listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
+set list listchars=tab:\→\ ,eol:¬,extends:…,precedes:❮,extends:❯,trail:·
 set noshowmode noshowcmd
 set nowrap
+" set relativenumber
 set splitright splitbelow
 set tabstop=2
 set termguicolors
@@ -79,7 +80,7 @@ let g:go_highlight_types = 0
 
 let g:go_modifytags_transform = 'camelcase'
 
-map <C-p> :GFiles<CR>
+map <C-p> :Files<CR>
 map <Tab> %
 map <leader>w :vsp<cr>
 nnoremap <leader><space> :noh<cr>
