@@ -24,6 +24,7 @@ alias gs='git status -sb'
 alias l='exa -1 -F --group-directories-first -a'
 alias ll='exa --long --git --group-directories-first -F --time-style long-iso -a'
 alias j='z'
+alias code='code-insiders'
 
 weather() {
   wttr=`curl -s wttr.in/Cape\ Town`
@@ -36,7 +37,7 @@ export FZF_DEFAULT_OPTS='--height=30%'
 
 fd() {
   local dir
-  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 3 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
+  dir=$(find ${1:-*} -path '*/\.*' -maxdepth 4 -prune -o -type d -print 2> /dev/null | grep -v 'node_modules' | grep -v 'vendor' | fzf +m) &&
   cd "$dir"
 }
 
@@ -47,6 +48,7 @@ hi() {
   brew upgrade
   brew prune
   brew cleanup
+	echo "You're all upgraded ✨"
 }
 
 source <(antibody init)
@@ -54,9 +56,6 @@ antibody bundle mafredri/zsh-async
 antibody bundle < $DOTFILES/plugins.txt
 
 autoload -U compinit && compinit
-
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 [[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
 
@@ -67,3 +66,9 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 # echo '%F{242}`goproverb`%f'
 # export RPROMPT='%F{242}$PROMPT_TIME%f'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
