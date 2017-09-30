@@ -1,93 +1,113 @@
-function fish_prompt --description 'Write out the prompt'
-	if not set -q __fish_git_prompt_show_informative_status
-        set -g __fish_git_prompt_show_informative_status 1
-    end
-    if not set -q __fish_git_prompt_hide_untrackedfiles
-        set -g __fish_git_prompt_hide_untrackedfiles 1
+function fish_prompt
+    set -l status_copy $status
+    set -l pwd_info (pwd_info "/")
+    set -l dir
+    set -l base
+    set -l color (set_color white)
+    set -l color2 (set_color normal)
+    set -l color3 (set_color $fish_color_command)
+    set -l color_error (set_color $fish_color_error)
+    set -l color_normal "$color2"
+
+    echo -sn " "
+
+    if test "$status_copy" -ne 0
+        set color "$color_error"
+        set color2 "$color_error"
+        set color3 "$color_error"
     end
 
-    if not set -q __fish_git_prompt_color_branch
-        set -g __fish_git_prompt_color_branch magenta --bold
-    end
-    if not set -q __fish_git_prompt_showupstream
-        set -g __fish_git_prompt_showupstream "informative"
-    end
-    if not set -q __fish_git_prompt_char_upstream_ahead
-        set -g __fish_git_prompt_char_upstream_ahead "↑"
-    end
-    if not set -q __fish_git_prompt_char_upstream_behind
-        set -g __fish_git_prompt_char_upstream_behind "↓"
-    end
-    if not set -q __fish_git_prompt_char_upstream_prefix
-        set -g __fish_git_prompt_char_upstream_prefix ""
+    set -l glyph " $color2\$$color_normal"
+
+    if test 0 -eq (id -u "$USER")
+        echo -sn "$color_error# $color_normal"
     end
 
-    if not set -q __fish_git_prompt_char_stagedstate
-        set -g __fish_git_prompt_char_stagedstate "●"
-    end
-    if not set -q __fish_git_prompt_char_dirtystate
-        set -g __fish_git_prompt_char_dirtystate "✚"
-    end
-    if not set -q __fish_git_prompt_char_untrackedfiles
-        set -g __fish_git_prompt_char_untrackedfiles "…"
-    end
-    if not set -q __fish_git_prompt_char_conflictedstate
-        set -g __fish_git_prompt_char_conflictedstate "✖"
-    end
-    if not set -q __fish_git_prompt_char_cleanstate
-        set -g __fish_git_prompt_char_cleanstate "✔"
+    if test ! -z "$SSH_CLIENT"
+        set -l color "$color2"
+
+        if test 0 -eq (id -u "$USER")
+            set color "$color_error"
+        end
+
+        echo -sn "$color"(host_info "user@")"$color_normal"
     end
 
-    if not set -q __fish_git_prompt_color_dirtystate
-        set -g __fish_git_prompt_color_dirtystate blue
-    end
-    if not set -q __fish_git_prompt_color_stagedstate
-        set -g __fish_git_prompt_color_stagedstate yellow
-    end
-    if not set -q __fish_git_prompt_color_invalidstate
-        set -g __fish_git_prompt_color_invalidstate red
-    end
-    if not set -q __fish_git_prompt_color_untrackedfiles
-        set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
-    end
-    if not set -q __fish_git_prompt_color_cleanstate
-        set -g __fish_git_prompt_color_cleanstate green --bold
+    if test "$PWD" = ~
+        set base "$color3~"
+        set glyph
+        
+    else if pwd_is_home
+        set dir
+
+    else
+        if test "$PWD" = /
+            set glyph
+        else
+            set dir "/"
+        end
+
+        set base "$color_error/"
     end
 
-    set -l last_status $status
-
-    if not set -q __fish_prompt_normal
-        set -g __fish_prompt_normal (set_color normal)
+    if test ! -z "$pwd_info[1]"
+        set base "$pwd_info[1]"
     end
 
-    set -l color_cwd
-    set -l prefix
-    set -l suffix
-    switch $USER
-        case root toor
-            if set -q fish_color_cwd_root
-                set color_cwd $fish_color_cwd_root
-            else
-                set color_cwd $fish_color_cwd
+    if test ! -z "$pwd_info[2]"
+        set dir "$dir$pwd_info[2]/"
+    end
+
+    echo -sn "$color2$dir$color$base$color_normal"
+
+    if test ! -z "$pwd_info[3]"
+        echo -sn "$color2/$pwd_info[3]"
+    end
+
+    if set branch_name (git_branch_name)
+        set -l git_color
+        set -l git_glyph \$
+
+        if git_is_staged
+            set git_color (set_color green)
+
+            if git_is_dirty
+                set git_glyph "$git_color$git_glyph$color_error$git_glyph"
+                set git_color "$color_error"
             end
-            set suffix '#'
-        case '*'
-            set color_cwd $fish_color_cwd
-            set suffix '$'
+
+        else if git_is_dirty
+            set git_color "$color_error"
+
+        else if git_is_touched
+            set git_color "$color_error"
+        else
+            set git_color "$color3"
+        end
+
+        set -l git_ahead (git_ahead " +" " -" " +-")
+
+        if test "$branch_name" = "master"
+            set branch_name
+            if git_is_stashed
+                set branch_name "{}"
+            end
+        else
+            set -l left_par "("
+            set -l right_par ")"
+
+            if git_is_stashed
+                set left_par "{"
+                set right_par "}"
+            end
+
+            set branch_name " $git_color$left_par$color2$branch_name$git_color$right_par"
+        end
+
+        echo -sn "$branch_name$git_color$git_ahead $git_glyph"
+    else
+        echo -sn "$color$glyph$color_normal"
     end
 
-    # PWD
-    set_color $color_cwd
-    echo -n (prompt_pwd)
-    set_color normal
-
-    printf '%s ' (__fish_vcs_prompt)
-
-    if not test $last_status -eq 0
-        set_color $fish_color_error
-    end
-
-    echo -n "$suffix "
-
-    set_color normal
+    echo -sn "$color_normal "
 end
