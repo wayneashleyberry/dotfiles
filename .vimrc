@@ -1,4 +1,3 @@
-" Plug 'lifepillar/vim-gruvbox8'
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -23,8 +22,6 @@ set tabstop=4
 set ignorecase smartcase
 set incsearch
 
-" let g:dracula_inverse = 0
-" let g:dracula_colorterm = 0
 let g:dracula_italic = 0
 
 color dracula
