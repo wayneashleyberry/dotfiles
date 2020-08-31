@@ -1,9 +1,0 @@
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[user]
-	name = wayneashleyberry
-	email = wayneashleyberry@gmail.com
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[color]
-	ui = true
